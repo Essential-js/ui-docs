@@ -1,0 +1,12 @@
+.layout {
+	height: 100%;
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 15% 85%;
+
+	main {
+		display: flow-root;
+		height: 100%;
+		width: 100%;
+	}
+}
