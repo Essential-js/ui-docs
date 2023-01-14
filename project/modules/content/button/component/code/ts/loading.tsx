@@ -1,6 +1,6 @@
 import React, { JSX } from 'react';
 import { ArrowRotateRight } from 'iconsax-react';
-import { Button } from '.';
+import { Button } from './index';
 
 interface Props extends Partial<HTMLButtonElement> {
 	icon: string | JSX.Element;

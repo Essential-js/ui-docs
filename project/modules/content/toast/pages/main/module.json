@@ -1,0 +1,20 @@
+{
+	"name": "main-toast-page",
+	"widget": {
+		"route": "/component/toast",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+
+		"element": {
+			"name": "main-toast-page"
+		}
+	},
+	"txt": {
+		"files": ["*"],
+		"path": "/widget/texts",
+		"multilanguage": true
+	}
+}

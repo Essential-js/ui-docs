@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Sidebar } from '../components/index';
+import { Toasts } from '@essential/ui/toast';
 
 declare global {
 	namespace JSX {
@@ -15,6 +16,12 @@ export function Layout() {
 			<Sidebar />
 			<main>
 				<beyond-layout-children />
+				<Toasts
+					position={{
+						bottom: '2rem',
+						right: '2rem',
+					}}
+				/>
 			</main>
 		</div>
 	);

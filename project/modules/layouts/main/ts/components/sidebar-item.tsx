@@ -6,9 +6,9 @@ interface Props {
 }
 
 export function SidebarItem({ component }: Props) {
-	const location = `/components/${component.path}`;
+	const location = `/component/${component.path}`;
 
-	function redirect(event) {
+	function redirect(event: { preventDefault: () => void }) {
 		event.preventDefault();
 		routing.pushState(location);
 	}

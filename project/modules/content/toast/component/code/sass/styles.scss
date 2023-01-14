@@ -1,0 +1,35 @@
+.essential__toasts {
+	position: absolute;
+	display: grid;
+	gap: 1rem;
+
+	.toast {
+		max-width: 300px;
+		padding: 0.6rem 1.2rem 0.6rem 0.8rem;
+		display: grid;
+		grid-template-columns: 25px calc(100% - 25px);
+		gap: 0.5rem;
+
+		align-items: center;
+
+		.icon {
+			width: 25px;
+		}
+
+		&.success {
+			background: var(--success);
+		}
+
+		&.error {
+			background: var(--error);
+		}
+
+		&.info {
+			background: var(--info);
+		}
+
+		&.loading {
+			background: var(--info);
+		}
+	}
+}

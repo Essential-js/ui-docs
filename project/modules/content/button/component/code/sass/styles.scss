@@ -1,0 +1,15 @@
+.essential__button {
+	background: var(--accent);
+	padding: 0.5rem 2rem;
+	cursor: pointer;
+
+	transition: background 0.2s ease-out;
+
+	&:hover {
+		background: var(--accent-hover);
+	}
+
+	&:active {
+		background: var(--accent-active);
+	}
+}
