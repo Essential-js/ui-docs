@@ -1,9 +1,22 @@
-import React, { JSX } from 'react';
+import React from 'react';
 
-export /*bundle*/ function Modal({ children, className, ...props }: Partial<HTMLElement>) {
+interface Props extends Partial<HTMLElement> {
+	onHide?: () => void;
+}
+
+export /*bundle*/ function Modal({ onHide, children, className, ...props }: Props) {
+	const modalRef = React.useRef(null);
+
+	function hide(event: React.MouseEvent<HTMLElement>) {
+		if (event.target === modalRef.current) return;
+		onHide();
+	}
+
 	return (
-		<code className={`essential__code ${className}`} {...props}>
-			{children}
-		</code>
+		<main onClick={hide} className="essential__modal" {...props}>
+			<article className={className} ref={modalRef}>
+				{children}
+			</article>
+		</main>
 	);
 }

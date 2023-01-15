@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import { TickCircle, CloseCircle, MessageCircle, RefreshCircle } from 'iconsax-react';
+import { TickCircle, CloseCircle, RefreshCircle, InfoCircle } from 'iconsax-react';
 import { nanoid } from 'nanoid';
 import { ReactiveModel } from '@essential/ui/reactive-model';
 
@@ -17,7 +17,7 @@ class Toast extends ReactiveModel {
 	icons = {
 		error: CloseCircle,
 		success: TickCircle,
-		info: MessageCircle,
+		info: InfoCircle,
 		loading: RefreshCircle,
 	};
 

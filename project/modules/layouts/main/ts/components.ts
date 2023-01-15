@@ -53,14 +53,6 @@ export const components = [
 		path: 'modals',
 		subComponents: [
 			{
-				name: 'Default',
-				path: 'modals/default',
-			},
-			{
-				name: 'Alert',
-				path: 'modals/alert',
-			},
-			{
 				name: 'Info',
 				path: 'modals/info',
 			},

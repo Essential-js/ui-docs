@@ -1,0 +1,20 @@
+{
+	"name": "main-modals-page",
+	"widget": {
+		"route": "/component/modals",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+
+		"element": {
+			"name": "main-modals-page"
+		}
+	},
+	"txt": {
+		"files": ["*"],
+		"path": "/widget/texts",
+		"multilanguage": true
+	}
+}

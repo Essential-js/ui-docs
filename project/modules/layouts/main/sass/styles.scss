@@ -2,7 +2,7 @@
 	height: 100%;
 	min-height: 100vh;
 	display: grid;
-	grid-template-columns: 15% 85%;
+	grid-template-columns: minmax(250px, 15%) 85%;
 
 	main {
 		padding: 0 2rem;

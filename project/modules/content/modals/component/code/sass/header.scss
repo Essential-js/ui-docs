@@ -1,0 +1,28 @@
+.header {
+	width: 100%;
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: calc(100% - 30px) 30px;
+	align-items: center;
+
+	.title {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 30px calc(100% - 30px);
+		gap: 1rem;
+		align-items: center;
+
+		h2 {
+			font-size: 1.2rem;
+			font-weight: 500;
+		}
+	}
+
+	button {
+		background: transparent;
+		cursor: pointer;
+		border: 0;
+		display: grid;
+		align-items: center;
+	}
+}
