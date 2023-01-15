@@ -11,7 +11,7 @@ function View({ store }) {
 		<div className="component">
 			<Header>Switch</Header>
 			<section>
-				<Overview>Well well well</Overview>
+				<Overview>Switch component easy to use and useful</Overview>
 
 				<h5>Results: </h5>
 				<Results />
