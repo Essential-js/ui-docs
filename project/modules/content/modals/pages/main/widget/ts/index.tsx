@@ -3,32 +3,24 @@ import { Header } from '@essential/ui/header';
 import { Overview } from '@essential/ui/overview';
 import { CopyableCode } from '@essential/ui/code';
 import { Results } from './components/results';
-import { config, implementation } from './components/implementation';
-import { SuccessModal } from '@essential/ui/modals';
+import { implementation } from './components/implementation';
 
 export /*bundle*/
 function View({ store }) {
 	return (
 		<div className="component">
-			<Header>Toast</Header>
+			<Header>Modal</Header>
 			<section>
-				<Overview>Production-ready toast component with a simple API and only one component to configure, context-free and customizable.</Overview>
+				<Overview>Ready-to-use modal components and absolute customization</Overview>
 
 				<h5>Results: </h5>
 				<Results />
 			</section>
-			<section className="config">
-				<h5>Configuration: </h5>
-				<CopyableCode title="Importation">{`import { Toasts } from '@essential/ui/toast';`}</CopyableCode>
-				<CopyableCode title="any-module.tsx">{config}</CopyableCode>
-			</section>
-
 			<section className="use">
-				<h5>Use: </h5>
-				<CopyableCode title="Importation">{`import { toast } from '@essential/ui/toast';`}</CopyableCode>
+				<h5>Default Modal: </h5>
+				<CopyableCode title="Importation">{`import { Modal } from '@essential/ui/modals';`}</CopyableCode>
 				<CopyableCode title="random-implementation.tsx">{implementation}</CopyableCode>
 			</section>
-			<SuccessModal title="Something went wrong" />
 		</div>
 	);
 }

@@ -16,7 +16,7 @@ export function Header({ title, icon, onHide, className = '', closeable = true, 
 	}
 
 	return (
-		<header className={`header ${className}`} {...props}>
+		<header className={`modal-header ${className}`} {...props}>
 			<div className="title">
 				{icon && <Icon className="icon" />}
 				<h2>{title}</h2>

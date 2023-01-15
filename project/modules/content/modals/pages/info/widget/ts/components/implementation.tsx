@@ -1,11 +1,20 @@
 export const implementation = `
 function Implementation() {
-    function handleClick() {
-        toast.info('Here goes the information that you want to display');
+    const [show, setShow] = React.useState(false);
+
+    function toggleShow() {
+        setShow(!show);
     }
 
     return (
-        <button onClick={handleClick}>Show info toast</button>
+        <>
+            <button onClick={toggleShow}>Show modal</button>
+            {show && 
+                <InfoModal title="Information!" onHide={toggleShow}>
+                    This is an example
+                </InfoModal>
+            }
+        </>
     )
 }
 `;

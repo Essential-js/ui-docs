@@ -1,15 +1,22 @@
 import React from 'react';
 import { Button } from '@essential/ui/buttons';
-import { toast } from '@essential/ui/toast';
+import { SuccessModal } from '@essential/ui/modals';
 
 export function Results() {
-	function show() {
-		toast.success('Something went right');
+	const [show, setShow] = React.useState(false);
+
+	function toggleShow() {
+		setShow(!show);
 	}
 
 	return (
 		<div className="results">
-			<Button onClick={show}>Show success toast</Button>
+			<Button onClick={toggleShow}>Show Modal</Button>
+			{show && (
+				<SuccessModal title="You did something right! " onHide={toggleShow}>
+					This is an example
+				</SuccessModal>
+			)}
 		</div>
 	);
 }

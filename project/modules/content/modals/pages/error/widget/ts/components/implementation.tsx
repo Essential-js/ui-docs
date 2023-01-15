@@ -1,11 +1,20 @@
 export const implementation = `
 function Implementation() {
-    function handleClick() {
-        toast.error('Something went wrong');
+    const [show, setShow] = React.useState(false);
+
+    function toggleShow() {
+        setShow(!show);
     }
 
     return (
-        <button onClick={handleClick}>Show error toast</button>
+        <>
+            <button onClick={toggleShow}>Show modal</button>
+            {show && 
+                <ErrorModal title="Something went wrong" onHide={toggleShow}>
+                    This is an example
+                </ErrorModal>
+            }
+        </>
     )
 }
 `;

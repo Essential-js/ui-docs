@@ -1,22 +1,20 @@
-export const config = `
-function App() {
-    // The toast component is the only setup
-    return (
-        <main>
-            <Toasts className="toast-list" position={{bottom: '2rem', right: '2rem'}} />
-        </main>
-    )
-}
-`;
-
 export const implementation = `
 function Implementation() {
-    function handleClick() {
-        toast.info('Here goes your message');
+    const [show, setShow] = React.useState(false);
+
+    function toggleShow() {
+        setShow(!show);
     }
 
     return (
-        <button onClick={handleClick}>Show toast</button>
+        <>
+            <button onClick={toggleShow}>Show modal</button>
+            {show && 
+                <Modal onHide={toggleShow}>
+                    This is an example
+                </Modal>
+            }
+        </>
     )
 }
 `;

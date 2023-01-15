@@ -1,15 +1,22 @@
 import React from 'react';
 import { Button } from '@essential/ui/buttons';
-import { toast } from '@essential/ui/toast';
+import { ErrorModal } from '@essential/ui/modals';
 
 export function Results() {
-	function handleClick() {
-		toast.error('Something went wrong');
+	const [show, setShow] = React.useState(false);
+
+	function toggleShow() {
+		setShow(!show);
 	}
 
 	return (
 		<div className="results">
-			<Button onClick={handleClick}>Show error toast</Button>
+			<Button onClick={toggleShow}>Show error modal</Button>
+			{show && (
+				<ErrorModal title="Something went wrong" onHide={toggleShow}>
+					This is an example
+				</ErrorModal>
+			)}
 		</div>
 	);
 }

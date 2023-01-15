@@ -9,16 +9,16 @@ export /*bundle*/
 function View({ store }) {
 	return (
 		<div className="component">
-			<Header>Toast</Header>
+			<Header>Success</Header>
 			<section>
-				<Overview>The success version of the toast comes with your default styles and it is as simple as specifying your method in the toast object.</Overview>
+				<Overview>The success version of the modal component with basic styles representing its use, fully modifiable and ready to be put into production.</Overview>
 
 				<h5>Results: </h5>
 				<Results />
 			</section>
-			<section className="use">
+			<section>
 				<h5>Use: </h5>
-				<CopyableCode title="Importation">{`import { toast } from '@essential/ui/toast';`}</CopyableCode>
+				<CopyableCode title="Importation">{`import { SuccessModal } from '@essential/ui/modals';`}</CopyableCode>
 				<CopyableCode title="random-implementation.tsx">{implementation}</CopyableCode>
 			</section>
 		</div>

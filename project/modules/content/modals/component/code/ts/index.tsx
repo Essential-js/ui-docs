@@ -8,7 +8,7 @@ export /*bundle*/ function Modal({ onHide, children, className, ...props }: Prop
 	const modalRef = React.useRef(null);
 
 	function hide(event: React.MouseEvent<HTMLElement>) {
-		if (event.target === modalRef.current) return;
+		if (event.target === modalRef.current || modalRef.current.contains(event.target)) return;
 		onHide();
 	}
 

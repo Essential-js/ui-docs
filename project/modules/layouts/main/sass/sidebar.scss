@@ -53,17 +53,16 @@
 			overflow-y: auto;
 
 			.sidebar-item {
-				border-radius: 20px;
 				cursor: pointer;
 				width: 100%;
+				padding: 0.5rem 0;
 				height: min-content;
-				padding: 0.5rem 0.5rem;
 				transition: all 0.2s ease-in-out;
 
 				a {
 					font-size: 0.95rem;
 					height: 100%;
-					padding: 0 1rem;
+					padding: 0.5rem 1rem;
 					display: inherit;
 				}
 
@@ -80,7 +79,7 @@
 					}
 
 					.sub-list {
-						padding: 1rem 0.2rem;
+						padding: 1rem 0.2rem 0 0.2rem;
 
 						.sidebar-item {
 							&:hover {
