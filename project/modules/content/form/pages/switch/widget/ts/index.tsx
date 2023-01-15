@@ -9,16 +9,16 @@ export /*bundle*/
 function View({ store }) {
 	return (
 		<div className="component">
-			<Header>Success</Header>
+			<Header>Switch</Header>
 			<section>
-				<Overview>The success version of the toast comes with your default styles and it is as simple as specifying your method in the toast object.</Overview>
+				<Overview>Well well well</Overview>
 
 				<h5>Results: </h5>
 				<Results />
 			</section>
 			<section className="use">
 				<h5>Use: </h5>
-				<CopyableCode title="Importation">{`import { toast } from '@essential-js/ui/toast';`}</CopyableCode>
+				<CopyableCode title="Importation">{`import { Switch } from '@essential-js/ui/form';`}</CopyableCode>
 				<CopyableCode title="random-implementation.tsx">{implementation}</CopyableCode>
 			</section>
 		</div>

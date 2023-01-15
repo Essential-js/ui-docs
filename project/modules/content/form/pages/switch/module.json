@@ -1,7 +1,7 @@
 {
-	"name": "success-toast-page",
+	"name": "swtich-page",
 	"widget": {
-		"route": "/component/toast/success",
+		"route": "/component/form/switch",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
@@ -9,7 +9,7 @@
 		},
 
 		"element": {
-			"name": "success-toast-page"
+			"name": "swtich-page"
 		}
 	},
 	"txt": {
