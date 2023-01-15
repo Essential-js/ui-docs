@@ -1,0 +1,36 @@
+.essential__input {
+	position: relative;
+	display: grid;
+
+	label {
+		font-size: 0.95rem;
+		position: absolute;
+		left: 1rem;
+
+		transition: all 0.2s ease-out;
+		transform: translateY(0.6rem);
+	}
+
+	input {
+		background: var(--secondary-background);
+		outline: transparent;
+		font-size: 1rem;
+		border: 0;
+
+		padding: 0.6rem 1rem;
+
+		&:focus ~ label {
+			font-size: 0.8rem;
+			transform: translateY(-0.8rem);
+		}
+
+		&:not(:focus)::placeholder {
+			color: transparent;
+		}
+
+		&:not(:placeholder-shown) ~ label {
+			font-size: 0.8rem;
+			transform: translateY(-0.8rem);
+		}
+	}
+}

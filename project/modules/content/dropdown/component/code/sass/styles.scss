@@ -1,0 +1,26 @@
+.essential__dropdown {
+	margin: 0;
+	background: var(--secondary-background);
+
+	.title {
+		cursor: pointer;
+		padding: 1rem 2rem;
+		display: grid;
+		grid-template-columns: calc(100% - 24px) 24px;
+		align-items: center;
+
+		h6 {
+			font-size: 1.5rem;
+		}
+
+		&.open {
+			.icon {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	.content {
+		padding: 1rem 2rem 2rem 2rem;
+	}
+}

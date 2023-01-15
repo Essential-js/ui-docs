@@ -9,17 +9,16 @@ export /*bundle*/
 function View({ store }) {
 	return (
 		<div className="component">
-			<Header>Info</Header>
+			<Header>Input</Header>
 			<section>
-				<Overview>The info version of the toast component.</Overview>
+				<Overview>The base input component with slight enhancements for the best user experience</Overview>
 
 				<h5>Results: </h5>
 				<Results />
 			</section>
-
 			<section className="use">
-				<h5>Use: </h5>
-				<CopyableCode title="Importation">{`import { toast } from '@essential-js/ui/toast';`}</CopyableCode>
+				<h5>Uso: </h5>
+				<CopyableCode title="Importation">{`import { Input } from '@essential-js/ui/form';`}</CopyableCode>
 				<CopyableCode title="random-implementation.tsx">{implementation}</CopyableCode>
 			</section>
 		</div>

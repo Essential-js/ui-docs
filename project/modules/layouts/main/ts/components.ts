@@ -1,8 +1,29 @@
 export const components = [
 	{
-		name: 'Empty',
-		path: 'empty',
-		subComponents: [],
+		name: 'Form',
+		path: 'form',
+		subComponents: [
+			{
+				name: 'Input',
+				path: 'form/input',
+			},
+			{
+				name: 'Validate input',
+				path: 'form/validate-input',
+			},
+			{
+				name: 'Checkbox',
+				path: 'form/checkbox',
+			},
+			{
+				name: 'Switch',
+				path: 'form/switch',
+			},
+			{
+				name: 'Textarea',
+				path: 'form/textarea',
+			},
+		],
 	},
 	{
 		name: 'Toasts',
@@ -27,28 +48,6 @@ export const components = [
 		],
 	},
 	{
-		name: 'Form',
-		path: 'form',
-		subComponents: [
-			{
-				name: 'Checkbox',
-				path: 'form/checkbox',
-			},
-			{
-				name: 'Input',
-				path: 'form/input',
-			},
-			{
-				name: 'Switch',
-				path: 'form/switch',
-			},
-			{
-				name: 'Textarea',
-				path: 'form/textarea',
-			},
-		],
-	},
-	{
 		name: 'Modals',
 		path: 'modals',
 		subComponents: [
@@ -65,5 +64,16 @@ export const components = [
 				path: 'modals/success',
 			},
 		],
+	},
+
+	{
+		name: 'Empty',
+		path: 'empty',
+		subComponents: [],
+	},
+	{
+		name: 'Dropdown',
+		path: 'dropdown',
+		subComponents: [],
 	},
 ];

@@ -9,7 +9,7 @@ export /*bundle*/
 function View({ store }) {
 	return (
 		<div className="component">
-			<Header>Toast</Header>
+			<Header>Error</Header>
 			<section>
 				<Overview>The error version of the toast component.</Overview>
 

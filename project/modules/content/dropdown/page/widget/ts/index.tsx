@@ -9,17 +9,14 @@ export /*bundle*/
 function View({ store }) {
 	return (
 		<div className="component">
-			<Header>Info</Header>
+			<Header>Dropdown</Header>
 			<section>
-				<Overview>The info version of the toast component.</Overview>
-
+				<Overview>A perfect dropdown component for dropdown sections ready for implementation</Overview>
 				<h5>Results: </h5>
 				<Results />
 			</section>
-
 			<section className="use">
-				<h5>Use: </h5>
-				<CopyableCode title="Importation">{`import { toast } from '@essential-js/ui/toast';`}</CopyableCode>
+				<CopyableCode title="Importation">{`import { Dropdown } from '@essential-js/ui/dropdown';`}</CopyableCode>
 				<CopyableCode title="random-implementation.tsx">{implementation}</CopyableCode>
 			</section>
 		</div>

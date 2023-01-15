@@ -3,18 +3,23 @@ import { Header } from '@essential-js/ui/header';
 import { Overview } from '@essential-js/ui/overview';
 import { CopyableCode } from '@essential-js/ui/code';
 import { Results } from './components/results';
-import { implementation } from './components/implementation';
+import { config, implementation } from './components/implementation';
 
 export /*bundle*/
 function View({ store }) {
 	return (
 		<div className="component">
-			<Header>Info</Header>
+			<Header>Toast</Header>
 			<section>
-				<Overview>The info version of the toast component.</Overview>
+				<Overview>Production-ready toast component with a simple API and only one component to configure, context-free and customizable.</Overview>
 
 				<h5>Results: </h5>
 				<Results />
+			</section>
+			<section className="config">
+				<h5>Configuration: </h5>
+				<CopyableCode title="Importation">{`import { Toasts } from '@essential-js/ui/toast';`}</CopyableCode>
+				<CopyableCode title="any-module.tsx">{config}</CopyableCode>
 			</section>
 
 			<section className="use">
