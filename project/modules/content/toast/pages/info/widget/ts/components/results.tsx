@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from '@essential/ui/buttons';
-import { toast } from '@essential/ui/toast';
+import { Button } from '@essential-js/ui/buttons';
+import { toast } from '@essential-js/ui/toast';
 
 export function Results() {
 	function show() {

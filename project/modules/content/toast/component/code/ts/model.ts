@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 import { TickCircle, CloseCircle, RefreshCircle, InfoCircle } from 'iconsax-react';
 import { nanoid } from 'nanoid';
-import { ReactiveModel } from '@essential/ui/reactive-model';
+import { ReactiveModel } from '@essential-js/ui/reactive-model';
 
 export /*bundle*/ type ToastTypes = 'success' | 'error' | 'info' | 'loading';
 export /*bundle*/ interface IToast {

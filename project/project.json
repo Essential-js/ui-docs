@@ -1,6 +1,6 @@
 {
 	"version": "1.0.0",
-	"scope": "essential",
+	"scope": "essential-js",
 	"name": "ui",
 	"title": "Essential UI",
 	"layout": "main-layout",
@@ -20,6 +20,14 @@
 				"platform": "web",
 				"ports": {
 					"bundles": 6530
+				}
+			},
+			{
+				"name": "npm",
+				"npm": {
+					"platforms": {
+						"web": "web"
+					}
 				}
 			}
 		]

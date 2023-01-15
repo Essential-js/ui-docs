@@ -1,7 +1,7 @@
 import React from 'react';
 import { Copy } from 'iconsax-react';
 import { Code } from './index';
-import { toast } from '@essential/ui/toast';
+import { toast } from '@essential-js/ui/toast';
 
 interface Props {
 	className: string;

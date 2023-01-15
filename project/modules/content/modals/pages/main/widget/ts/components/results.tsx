@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from '@essential/ui/buttons';
-import { Modal } from '@essential/ui/modals';
+import { Button } from '@essential-js/ui/buttons';
+import { Modal } from '@essential-js/ui/modals';
 
 export function Results() {
 	const [show, setShow] = React.useState(false);

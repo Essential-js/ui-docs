@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Header } from '@essential/ui/header';
-import { Overview } from '@essential/ui/overview';
-import { CopyableCode } from '@essential/ui/code';
+import { Header } from '@essential-js/ui/header';
+import { Overview } from '@essential-js/ui/overview';
+import { CopyableCode } from '@essential-js/ui/code';
 import { Results } from './components/results';
 import { implementation } from './components/implementation';
 
@@ -18,7 +18,7 @@ function View({ store }) {
 			</section>
 			<section className="use">
 				<h5>Uso: </h5>
-				<CopyableCode title="Importation">{`import { toast } from '@essential/ui/toast';`}</CopyableCode>
+				<CopyableCode title="Importation">{`import { toast } from '@essential-js/ui/toast';`}</CopyableCode>
 				<CopyableCode title="random-implementation.tsx">{implementation}</CopyableCode>
 			</section>
 		</div>

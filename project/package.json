@@ -1,10 +1,10 @@
 {
-	"name": "@essential/ui",
+	"name": "@essential-js-js/ui",
 	"version": "0.0.1",
 	"private": "true",
-	"description": "",
-	"author": "",
-	"license": "ISC",
+	"description": "Essential UI is a collection of reusable components",
+	"author": "bryantdev_",
+	"license": "MIT",
 	"dependencies": {
 		"@beyond-js/react-widgets": "^18.20.4",
 		"iconsax-react": "^0.0.8",

@@ -1,5 +1,5 @@
 import React, { JSX } from 'react';
-import { useBinder } from '@essential/ui/hooks';
+import { useBinder } from '@essential-js/ui/hooks';
 import { IToast, toast } from './model';
 import { Toast } from './toast';
 
