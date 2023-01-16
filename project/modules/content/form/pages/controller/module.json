@@ -1,15 +1,19 @@
 {
-	"name": "main-toast-page",
+	"name": "form-page",
 	"widget": {
-		"route": "/component/toast",
+		"route": "/component/form/controller",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
 			"files": ["*"]
 		},
+		"sass": {
+			"path": "/widget/sass",
+			"files": ["*"]
+		},
 
 		"element": {
-			"name": "main-toast-page"
+			"name": "form-page"
 		}
 	},
 	"txt": {

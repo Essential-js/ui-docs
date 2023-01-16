@@ -1,8 +1,12 @@
 export const components = [
 	{
 		name: 'Form',
-		path: 'form',
+		path: 'form/controller',
 		subComponents: [
+			{
+				name: 'Controller',
+				path: 'form/controller',
+			},
 			{
 				name: 'Input',
 				path: 'form/input',
@@ -10,10 +14,6 @@ export const components = [
 			{
 				name: 'Validate input',
 				path: 'form/validate-input',
-			},
-			{
-				name: 'Checkbox',
-				path: 'form/checkbox',
 			},
 			{
 				name: 'Switch',
