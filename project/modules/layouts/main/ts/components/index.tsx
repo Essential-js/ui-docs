@@ -11,12 +11,14 @@ interface IComponent {
 }
 
 export function Sidebar() {
+	const [open, setOpen] = React.useState<null | string>(null);
+
 	const componentsElements = components.map((component: IComponent) => {
 		if (component?.subComponents.length > 0) {
-			return <SidebarDropdown key={component.path} component={component} />;
+			return <SidebarDropdown key={component.path} component={component} open={open} setOpen={setOpen} />;
 		}
 
-		return <SidebarItem key={component.path} component={component} />;
+		return <SidebarItem key={component.path} component={component} open={open} />;
 	});
 
 	return (

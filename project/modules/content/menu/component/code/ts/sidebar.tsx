@@ -1,23 +1,35 @@
-import { ArrowSquareRight } from 'iconsax-react';
 import React from 'react';
 
-export /*bundle*/ function DropdownSidebar({ children }: Partial<HTMLElement>) {
-	const [isOpen, setIsOpen] = React.useState(false);
-	const cls = isOpen ? 'open' : 'closed';
-	const title = isOpen ? 'close' : 'open';
+import { ArrowSquareRight } from 'iconsax-react';
+
+interface Props extends Partial<HTMLElement> {
+	logo?: React.JSX.Element;
+	onChange?: (isOpen: boolean) => void;
+}
+
+export /*bundle*/ function DropdownSidebar({ onChange, children, logo, ...props }: Props): React.FC {
+	const [isOpen, setIsOpen] = React.useState<boolean>(false);
+	const cls: string = isOpen ? 'open' : 'closed';
+	const title: string = isOpen ? 'close' : 'open';
 
 	function toggleIsOpen() {
 		setIsOpen(!isOpen);
+		if (onChange) onChange(isOpen);
 	}
 
-	const iconProps = isOpen ? { variant: 'Bulk' } : {};
+	const iconProps: { variant?: string } = isOpen ? { variant: 'Bulk' } : {};
 
 	return (
-		<aside className={`sidebar ${cls}`}>
-			<button title={title} onClick={toggleIsOpen}>
-				<ArrowSquareRight {...iconProps} />
-			</button>
-			{children}
+		<aside className={`sidebar ${cls}`} {...props}>
+			<div className="sidebar__header">
+				<div className="logo">{logo}</div>
+				<button title={title} onClick={toggleIsOpen} className="toggle__btn">
+					<ArrowSquareRight {...iconProps} />
+				</button>
+			</div>
+			<nav className="sidebar__nav">
+				<ul className="sidebar__list">{children}</ul>
+			</nav>
 		</aside>
 	);
 }

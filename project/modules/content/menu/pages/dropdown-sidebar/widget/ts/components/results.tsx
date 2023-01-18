@@ -1,20 +1,33 @@
 import React from 'react';
 import { DropdownSidebar } from '@essential-js/ui/menu';
+const logoTest = `https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/225px-Spotify_logo_without_text.svg.png`;
 
-const ERROR_MESSAGE = 'Error, value is too short';
-const REGEX = /.{5,16}/;
 export function Results() {
-	const [value, setValue] = React.useState('');
-
-	function onChange(event: { target: { value: string } }) {
-		const { value } = event.target;
-		setValue(value);
-	}
-
-	const isOk = REGEX.test(value);
 	return (
 		<div className="results">
-			<DropdownSidebar></DropdownSidebar>
+			<DropdownSidebar logo={<img src={logoTest} />}>
+				<li>A</li>
+				<li>B</li>
+				<li>C</li>
+				<li>D</li>
+				<li>E</li>
+				<li>F</li>
+				<li>G</li>
+				<li>H</li>
+				<li>I</li>
+				<li>J</li>
+				<li>K</li>
+				<li>L</li>
+				<li>M</li>
+				<li>N</li>
+				<li>O</li>
+				<li>P</li>
+				<li>Q</li>
+				<li>R</li>
+				<li>S</li>
+				<li>T</li>
+				<li>U</li>
+			</DropdownSidebar>
 		</div>
 	);
 }

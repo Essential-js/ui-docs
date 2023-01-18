@@ -3,4 +3,15 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+	&::-webkit-scrollbar {
+		width: 5px;
+		background-color: #202020;
+	}
+
+	/* thumb color */
+	&::-webkit-scrollbar-thumb {
+		background-color: #121212;
+		border-radius: 5px;
+	}
 }

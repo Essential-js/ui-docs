@@ -1,0 +1,12 @@
+.results {
+	background: #000;
+	width: 100%;
+	height: 500px;
+
+	position: relative;
+	overflow: hidden;
+
+	.sidebar {
+		position: absolute;
+	}
+}

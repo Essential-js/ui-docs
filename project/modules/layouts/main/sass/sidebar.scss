@@ -82,14 +82,16 @@
 						padding: 1rem 0.2rem 0 0.2rem;
 
 						.sidebar-item {
-							&:hover {
+							&:hover,
+							&.open {
 								background: var(--secondary-background);
 							}
 						}
 					}
 				}
 
-				&:hover {
+				&:hover,
+				&.open {
 					background: var(--accent);
 				}
 
