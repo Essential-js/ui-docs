@@ -11,7 +11,14 @@
 		grid-template-columns: 25px calc(100% - 25px);
 		gap: 0.5rem;
 
+		transform: translateY(50%);
+		opacity: 0;
+
 		align-items: center;
+
+		&.enter {
+			animation: toast-enter 300ms ease-in-out forwards;
+		}
 
 		.message {
 		}
@@ -35,5 +42,12 @@
 		&.loading {
 			background: var(--info);
 		}
+	}
+}
+
+@keyframes toast-enter {
+	to {
+		transform: translateY(0);
+		opacity: 1;
 	}
 }

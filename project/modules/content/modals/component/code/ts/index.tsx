@@ -7,6 +7,10 @@ interface Props extends Partial<HTMLElement> {
 export /*bundle*/ function Modal({ onHide, children, className, ...props }: Props) {
 	const modalRef = React.useRef(null);
 
+	React.useEffect(() => {
+		if (modalRef.current) modalRef.current.classList.add('appear');
+	}, [modalRef.current]);
+
 	function hide(event: React.MouseEvent<HTMLElement>) {
 		if (event.target === modalRef.current || modalRef.current.contains(event.target)) return;
 		onHide();

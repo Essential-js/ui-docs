@@ -65,6 +65,24 @@ export const components = [
 			},
 		],
 	},
+	{
+		name: 'Menu',
+		path: 'menu',
+		subComponents: [
+			{
+				name: 'Dropdown Sidebar',
+				path: 'menu/dropdown-sidebar',
+			},
+			{
+				name: 'Error',
+				path: 'modals/error',
+			},
+			{
+				name: 'Success',
+				path: 'modals/success',
+			},
+		],
+	},
 
 	{
 		name: 'Empty',

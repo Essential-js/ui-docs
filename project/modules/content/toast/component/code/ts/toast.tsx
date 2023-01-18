@@ -13,7 +13,15 @@ interface Props {
 const DEFAULT_DURATION = 3000;
 
 export /*bundle*/ function Toast({ type, message, duration, id, icon }: Props) {
+	const toastRef = React.useRef<HTMLDivElement>(null);
 	const Icon = icon;
+
+	React.useEffect(() => {
+		if (toastRef.current) toastRef.current.classList.add('enter');
+		return () => {
+			if (toastRef.current) toastRef.current.classList.remove('enter');
+		};
+	}, [toastRef.current]);
 
 	React.useEffect(() => {
 		duration = duration ?? DEFAULT_DURATION;
@@ -24,7 +32,7 @@ export /*bundle*/ function Toast({ type, message, duration, id, icon }: Props) {
 	}, [duration]);
 
 	return (
-		<article className={`toast ${type}`}>
+		<article ref={toastRef} className={`toast ${type}`}>
 			<Icon style={{ width: '25px', height: '25px' }} className="icon" />
 			<p className="message">{message}</p>
 		</article>

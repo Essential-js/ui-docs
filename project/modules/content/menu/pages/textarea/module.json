@@ -1,0 +1,20 @@
+{
+	"name": "textarea-page",
+	"widget": {
+		"route": "/component/form/textarea",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+
+		"element": {
+			"name": "textarea-page"
+		}
+	},
+	"txt": {
+		"files": ["*"],
+		"path": "/widget/texts",
+		"multilanguage": true
+	}
+}
