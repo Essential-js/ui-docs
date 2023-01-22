@@ -89,11 +89,6 @@ export const components = [
 	},
 
 	{
-		name: 'Empty',
-		path: 'empty',
-		subComponents: [],
-	},
-	{
 		name: 'Dropdown',
 		path: 'dropdown',
 		subComponents: [],
