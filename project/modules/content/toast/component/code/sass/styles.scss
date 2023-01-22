@@ -1,4 +1,5 @@
 .essential__toasts {
+	max-height: 100vh;
 	position: absolute;
 	display: grid;
 	gap: 1rem;
@@ -12,7 +13,7 @@
 		gap: 0.5rem;
 
 		transform: translateY(50%);
-		opacity: 0;
+		opacity: 1;
 
 		align-items: center;
 
@@ -20,11 +21,13 @@
 			animation: toast-enter 300ms ease-in-out forwards;
 		}
 
-		.message {
+		&.exit {
+			animation: toast-exit 100ms ease-in-out forwards;
 		}
 
 		.icon {
 			width: 25px;
+			height: 25px;
 		}
 
 		&.success {
@@ -49,5 +52,12 @@
 	to {
 		transform: translateY(0);
 		opacity: 1;
+	}
+}
+
+@keyframes toast-exit {
+	to {
+		transform: translate(80%, 0);
+		opacity: 0;
 	}
 }

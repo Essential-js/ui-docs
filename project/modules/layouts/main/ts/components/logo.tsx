@@ -11,7 +11,7 @@ export function Logo() {
 	return (
 		<h1 className="aside__logo">
 			<a onClick={goHome} href="/">
-				<Bag2 className="icon" />
+				<Bag2 className="icon" size="50" />
 				<p>
 					Essential <span>UI</span>
 				</p>

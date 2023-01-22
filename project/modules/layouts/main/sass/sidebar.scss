@@ -1,57 +1,42 @@
-.aside {
-	background: var(--secondary-background);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 2rem 0 0 0;
-	height: 100%;
-
-	&__logo {
+.sidebar {
+	&__header {
 		width: 100%;
 
-		a {
+		.logo {
 			width: 100%;
-			color: var(--text-color);
-			text-decoration: none;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 0.8rem;
 
-			.icon {
-				aspect-ratio: 1/1;
-				width: 50px;
-				height: 50px;
-			}
-
-			p {
-				text-align: center;
+			h1 {
 				width: 100%;
-				margin: 0;
-			}
-		}
 
-		&:hover {
-			a {
-				span {
-					color: var(--accent);
+				a {
+					text-decoration: none;
+					display: grid;
+					place-content: center;
+
+					p {
+						text-align: center;
+					}
+
+					.icon {
+						margin: 0 auto;
+					}
+				}
+
+				&:hover {
+					a {
+						p {
+							span {
+								color: var(--accent);
+							}
+						}
+					}
 				}
 			}
 		}
 	}
 
-	nav {
-		width: 100%;
-
-		ul {
-			width: 100%;
-			padding: 2rem 1rem;
-			margin: 0;
-			display: flex;
-			flex-direction: column;
-			gap: 0.5rem;
-			overflow-y: auto;
-
+	&__nav {
+		.sidebar__list {
 			.sidebar-item {
 				cursor: pointer;
 				width: 100%;

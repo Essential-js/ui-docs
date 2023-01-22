@@ -15,13 +15,13 @@ export function Layout() {
 		<div className="layout">
 			<Sidebar />
 			<main>
-				<beyond-layout-children />
 				<Toasts
 					position={{
 						bottom: '2rem',
 						right: '2rem',
 					}}
 				/>
+				<beyond-layout-children />
 			</main>
 		</div>
 	);

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { DropdownSidebar } from '@essential-js/ui/menu';
 import { components } from '../components';
 import { SidebarDropdown } from './sidebar-dropdown';
 import { SidebarItem } from './sidebar-item';
@@ -21,12 +22,5 @@ export function Sidebar() {
 		return <SidebarItem key={component.path} component={component} open={open} />;
 	});
 
-	return (
-		<aside className="aside">
-			<Logo />
-			<nav role="navigation">
-				<ul>{componentsElements}</ul>
-			</nav>
-		</aside>
-	);
+	return <DropdownSidebar logo={<Logo />}>{componentsElements}</DropdownSidebar>;
 }

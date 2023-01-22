@@ -19,7 +19,7 @@
 				"environment": "development",
 				"platform": "web",
 				"ports": {
-					"bundles": 6530
+					"bundles": 3002
 				}
 			},
 			{

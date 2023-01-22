@@ -11,13 +11,16 @@ interface Props {
 }
 
 const DEFAULT_DURATION = 3000;
+const ANIMATION_MARGIN = 300;
 
 export /*bundle*/ function Toast({ type, message, duration, id, icon }: Props) {
 	const toastRef = React.useRef<HTMLDivElement>(null);
 	const Icon = icon;
 
 	React.useEffect(() => {
-		if (toastRef.current) toastRef.current.classList.add('enter');
+		if (toastRef.current) {
+			toastRef.current.classList.add('enter');
+		}
 		return () => {
 			if (toastRef.current) toastRef.current.classList.remove('enter');
 		};
@@ -27,9 +30,16 @@ export /*bundle*/ function Toast({ type, message, duration, id, icon }: Props) {
 		duration = duration ?? DEFAULT_DURATION;
 
 		setTimeout(() => {
-			toast.current = toast.current.filter((item: IToast) => item.id !== id);
+			toastRef.current.classList.remove('enter');
+			toastRef.current.classList.add('exit');
 		}, duration);
-	}, [duration]);
+
+		const timeout = setTimeout(() => {
+			toast.current = toast.current.filter((item: IToast) => item.id !== id);
+		}, duration + ANIMATION_MARGIN);
+
+		return () => clearTimeout(timeout);
+	}, [duration, id]);
 
 	return (
 		<article ref={toastRef} className={`toast ${type}`}>

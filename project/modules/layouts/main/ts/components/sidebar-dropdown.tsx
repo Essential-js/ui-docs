@@ -29,7 +29,7 @@ export function SidebarDropdown({ component, open, setOpen }: Props) {
 
 	function toggleDropdown(event) {
 		event.preventDefault();
-		setOpen(component.name);
+		setOpen(component.name === open ? false : component.name);
 		routing.pushState(location);
 	}
 

@@ -1,8 +1,12 @@
 import React from 'react';
 
-export /*bundle*/ function Button({ children, ...props }: Partial<HTMLButtonElement>) {
+interface Props extends Partial<HTMLButtonElement> {
+	children: React.JSX.Element | Array<React.JSX.Element>;
+}
+
+export /*bundle*/ function Button({ children, ...props }: Props) {
 	return (
-		<button className={`essential__button ${props.className}`} {...props}>
+		<button {...props} className={`essential__button ${props.className}`}>
 			{children}
 		</button>
 	);

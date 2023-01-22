@@ -56,6 +56,10 @@ export const components = [
 				path: 'modals/info',
 			},
 			{
+				name: 'Confirm',
+				path: 'modals/confirm',
+			},
+			{
 				name: 'Error',
 				path: 'modals/error',
 			},

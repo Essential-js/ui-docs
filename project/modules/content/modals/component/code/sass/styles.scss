@@ -13,12 +13,18 @@
 	align-items: center;
 
 	article {
+		opacity: 1;
+		transform: scale(1);
+		min-height: 75%;
 		background: var(--background);
 		min-width: 60%;
-		min-height: 75%;
 
 		&.appear {
-			animation: appear 0.2s ease-in-out;
+			animation: appear 0.2s ease-in-out forwards;
+		}
+
+		&.disappear {
+			animation: disappear 0.1s ease-in-out forwards;
 		}
 
 		.content {
@@ -35,5 +41,12 @@
 	to {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@keyframes disappear {
+	to {
+		opacity: 0;
+		transform: scale(0.4);
 	}
 }

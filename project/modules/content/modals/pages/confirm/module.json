@@ -1,0 +1,20 @@
+{
+	"name": "confirm-modal-page",
+	"widget": {
+		"route": "/component/modals/confirm",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+
+		"element": {
+			"name": "confirm-modal-page"
+		}
+	},
+	"txt": {
+		"files": ["*"],
+		"path": "/widget/texts",
+		"multilanguage": true
+	}
+}

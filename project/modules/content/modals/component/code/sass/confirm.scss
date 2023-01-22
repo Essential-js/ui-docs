@@ -1,0 +1,17 @@
+article.confirm__modal.confirm {
+	min-height: min-content;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	.actions {
+		padding: 2rem;
+		display: flex;
+		justify-content: flex-end;
+		gap: 1rem;
+
+		.cancel {
+			background: var(--disabled);
+		}
+	}
+}

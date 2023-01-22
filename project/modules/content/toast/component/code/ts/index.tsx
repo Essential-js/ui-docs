@@ -22,10 +22,6 @@ export /*bundle*/ function Toasts({ position = { bottom: '1rem', right: '1rem' }
 
 	const elements = items.map((item: IToast) => <Toast key={item.id} {...item} />);
 
-	const contextValue = {
-		items,
-		setItems,
-	};
 	return (
 		<div style={position} className={`essential__toasts ${className}`} {...props}>
 			{elements}
