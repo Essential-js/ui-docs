@@ -9,16 +9,16 @@ export /*bundle*/
 function View({ store }) {
 	return (
 		<div className="component">
-			<Header>Switch</Header>
+			<Header>Table</Header>
 			<section>
-				<Overview>Switch component easy to use and useful</Overview>
+				<Overview>Table component easy to use and useful</Overview>
 
 				<h5>Results: </h5>
 				<Results />
 			</section>
 			<section className="use">
 				<h5>Use: </h5>
-				<CopyableCode title="Importation">{`import { Switch } from '@essential-js/ui/form';`}</CopyableCode>
+				<CopyableCode title="Importation">{`import { Table } from '@essential-js/ui/menu';`}</CopyableCode>
 				<CopyableCode title="random-implementation.tsx">{implementation}</CopyableCode>
 			</section>
 		</div>

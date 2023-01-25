@@ -1,7 +1,7 @@
 {
-	"name": "swtich-page",
+	"name": "table-page",
 	"widget": {
-		"route": "/component/form/switch",
+		"route": "/component/menu/table",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
@@ -9,7 +9,7 @@
 		},
 
 		"element": {
-			"name": "swtich-page"
+			"name": "table-page"
 		}
 	},
 	"txt": {

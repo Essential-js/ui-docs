@@ -78,8 +78,8 @@ export const components = [
 				path: 'menu/dropdown-sidebar',
 			},
 			{
-				name: 'Error',
-				path: 'modals/error',
+				name: 'Table',
+				path: 'menu/table',
 			},
 			{
 				name: 'Success',
