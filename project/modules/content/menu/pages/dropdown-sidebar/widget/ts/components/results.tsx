@@ -22,11 +22,6 @@ export function Results() {
 				<li>N</li>
 				<li>O</li>
 				<li>P</li>
-				<li>Q</li>
-				<li>R</li>
-				<li>S</li>
-				<li>T</li>
-				<li>U</li>
 			</DropdownSidebar>
 		</div>
 	);

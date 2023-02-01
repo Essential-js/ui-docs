@@ -1,7 +1,7 @@
 {
 	"name": "dropdown-sidebar-page",
 	"widget": {
-		"route": "/component/menu/dropdown-sidebar",
+		"route": "/component/menu/sidebar",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",

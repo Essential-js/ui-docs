@@ -71,19 +71,19 @@ export const components = [
 	},
 	{
 		name: 'Menu',
-		path: 'menu',
+		path: 'menu/sidebar',
 		subComponents: [
 			{
-				name: 'Dropdown Sidebar',
-				path: 'menu/dropdown-sidebar',
+				name: 'Sidebar',
+				path: 'menu/sidebar',
 			},
 			{
 				name: 'Table',
 				path: 'menu/table',
 			},
 			{
-				name: 'Success',
-				path: 'modals/success',
+				name: 'Tooltip',
+				path: 'menu/tooltip',
 			},
 		],
 	},

@@ -7,8 +7,9 @@ interface Props extends Partial<HTMLTableElement> {
 export /*bundle*/ function Table({ breakpoint = 750, children, ...props }: Props) {
 	const breakpointClass = `breakpoint-${breakpoint}px`;
 
+	const styles = { boxLines: breakpoint, ...props.style };
 	return (
-		<table {...props} className={`essential__table ${props.className} ${breakpointClass}`}>
+		<table {...props} style={styles} className={`essential__table ${props.className} ${breakpointClass}`}>
 			{children}
 		</table>
 	);

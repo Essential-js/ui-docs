@@ -9,7 +9,7 @@ export /*bundle*/
 function View({ store }) {
 	return (
 		<div className="component">
-			<Header>Textarea</Header>
+			<Header>Tooltip</Header>
 			<section>
 				<Overview>Ready-to-use and easy to implement textarea component</Overview>
 				<h5>Results: </h5>

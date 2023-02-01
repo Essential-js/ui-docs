@@ -1,7 +1,7 @@
 {
-	"name": "textarea-page",
+	"name": "tooltip-page",
 	"widget": {
-		"route": "/component/form/textarea",
+		"route": "/component/menu/tooltip",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",
@@ -9,7 +9,7 @@
 		},
 
 		"element": {
-			"name": "textarea-page"
+			"name": "tooltip-page"
 		}
 	},
 	"txt": {

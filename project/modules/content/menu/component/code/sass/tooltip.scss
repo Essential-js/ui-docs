@@ -1,0 +1,17 @@
+.essential__tooltip {
+	width: min-content;
+
+	.tooltip {
+		background: var(--secondary-background);
+		border: 1px solid var(--disabled);
+		font-size: 0.8rem;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+
+		max-width: calc(100vw - 20px);
+		padding: 0.2rem 0.8rem;
+
+		position: absolute;
+		overflow: hidden;
+	}
+}
