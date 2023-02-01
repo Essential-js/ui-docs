@@ -1,33 +1,33 @@
 # 🎨 Essential-UI
-Un componente de biblioteca de React fresco y único que hará que tu aplicación brille.
+A fresh and unique component library for React that will make your app shine.
 
-## 🥇 ¿Qué es Essential-UI?
-Essential-UI es una biblioteca de componentes de React con un aspecto innovador y fácil de implementar. Con nuestros componentes de alta calidad, puedes crear aplicaciones impresionantes en poco tiempo.
+## 🥇 What is Essential-UI?
+Essential-UI is a React component library with an innovative look and feel that is easy to implement. With our high-quality components, you can create stunning apps in no time.
 
-### 🔥 ¿Por qué Essential-UI es diferente?
-Nuestros componentes tienen un diseño único y moderno que los diferencian de los demás en el mercado. Además, hemos trabajado arduamente para garantizar que sean fáciles de usar y personalizar.
+### 🔥 Why is Essential-UI different?
+Our components have a unique and modern design that set them apart from others on the market. In addition, we have worked hard to ensure that they are easy to use and customize.
 
-### ✨ Características clave
-- Diseño innovador y único
-- Fácil implementación
-- Personalización fácil
+### ✨ Key features.
+- Innovative and unique design
+- Easy implementation
+- Easy customization
 
-### 🤔 ¿Cómo comenzar?
-Instala Essential-UI usando npm:
+### 🤔 How to get started.
+Install Essential-UI using npm:
 
-`npm i @essential-js/ui`
+`npm i @essential-js/ui`.
 
-Luego, importa los componentes que necesitas en tu aplicación:
+Then, import the components you need in your application:
 
 `import { Button } from 'essential-js/ui';`
 
-¡Y eso es todo! Ahora puedes usar los componentes de Essential-UI en tu aplicación.
+And that's it! Now you can use the Essential-UI components in your application.
 
-### 📖 Documentación
-Consulta la documentación en línea para obtener más información sobre cómo usar y personalizar los componentes de Essential-UI.
+### 📖 Documentation
+See the online documentation for more information on how to use and customize Essential-UI components.
 
-### 🤝❤ Contribuir
-¡Estamos encantados de recibir contribuciones de la comunidad! Consulta nuestras directrices de contribución para obtener más información sobre cómo puedes ayudar.
+### 🤝❤ Contribute
+We're happy to receive contributions from the community! See our contribution guidelines for more information on how you can help.
 
-### ¡Gracias por usar Essential-UI!
-Haz que tu aplicación brille con nuestros componentes únicos y fáciles de usar. 🌟
+### Thank you for using Essential-UI!
+Make your app shine with our unique and easy-to-use components. 🌟
