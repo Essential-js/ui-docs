@@ -1,7 +1,7 @@
 {
 	"name": "buttons-page",
 	"widget": {
-		"route": "/component/button",
+		"route": "/component/form/buttons",
 		"is": "page",
 		"ts": {
 			"path": "/widget/ts",

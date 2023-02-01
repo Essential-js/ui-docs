@@ -23,6 +23,10 @@ export const components = [
 				name: 'Textarea',
 				path: 'form/textarea',
 			},
+			{
+				name: 'Buttons',
+				path: 'form/buttons',
+			},
 		],
 	},
 	{

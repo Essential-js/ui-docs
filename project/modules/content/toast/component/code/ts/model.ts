@@ -3,23 +3,24 @@ import { TickCircle, CloseCircle, RefreshCircle, InfoCircle } from 'iconsax-reac
 import { nanoid } from 'nanoid';
 import { ReactiveModel } from '@essential-js/ui/reactive-model';
 
-export /*bundle*/ type ToastTypes = 'success' | 'error' | 'info' | 'loading';
 export /*bundle*/ interface IToast {
 	id: string;
 	message: string;
-	type: ToastTypes;
+	type: string;
 	duration?: number;
 	icon: JSX.Element;
 }
 
 class Toast extends ReactiveModel {
 	#current: Array<IToast | undefined>;
-	icons = {
+	#icons = {
 		error: CloseCircle,
 		success: TickCircle,
 		info: InfoCircle,
 		loading: RefreshCircle,
 	};
+
+	#defaultTypes = ['remove', 'info', 'success', 'error', 'loading'];
 
 	get current() {
 		return this.#current;
@@ -32,16 +33,21 @@ class Toast extends ReactiveModel {
 
 	constructor() {
 		super();
+
+		this.#defaultTypes.map((type) => {
+			this.set(type);
+		});
+
 		this.#current = [];
 	}
 
-	#add(type: ToastTypes, message: string, duration: number) {
+	#add(type: string, message: string, duration: number) {
 		const newToast: IToast = {
 			id: nanoid(),
 			message,
 			type,
 			duration,
-			icon: this.icons[type],
+			icon: this.#icons[type],
 		};
 
 		this.#current = [...this.#current, newToast];
@@ -54,20 +60,12 @@ class Toast extends ReactiveModel {
 		this.triggerEvent('current-toasts-changed');
 	}
 
-	success(message: string, duration: number) {
-		return this.#add('success', message, duration);
+	set(type: string) {
+		this[type] = (message: string, duration: number) => this.#add(type, message, duration);
 	}
 
-	error(message: string, duration: number) {
-		return this.#add('error', message, duration);
-	}
-
-	info(message: string, duration: number) {
-		return this.#add('info', message, duration);
-	}
-
-	loading(message: string, duration: number) {
-		return this.#add('loading', message, duration);
+	setIcon(iconName: string, icon: JSX.Element) {
+		this.#icons[iconName] = icon;
 	}
 }
 

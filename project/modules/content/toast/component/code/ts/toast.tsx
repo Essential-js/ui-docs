@@ -1,9 +1,9 @@
 import React, { JSX } from 'react';
-import { IToast, ToastTypes, toast } from './model';
+import { IToast, toast } from './model';
 
 interface Props {
 	key: string;
-	type: ToastTypes;
+	type: string;
 	message: string;
 	duration?: number;
 	id: string;
@@ -43,7 +43,7 @@ export /*bundle*/ function Toast({ type, message, duration, id, icon }: Props) {
 
 	return (
 		<article ref={toastRef} className={`toast ${type}`}>
-			<Icon style={{ width: '25px', height: '25px' }} className="icon" />
+			{icon && <Icon style={{ width: '25px', height: '25px' }} className="icon" />}
 			<p className="message">{message}</p>
 		</article>
 	);
