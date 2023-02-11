@@ -3,17 +3,30 @@ import { Input } from './input';
 
 interface Props extends Partial<HTMLInputElement> {
 	label: string;
-	message: string;
+	errorMessage: string;
+	successMessage: string;
 	isOk: boolean;
+	inputClassName: string;
 }
 
-export /*bundle*/ function ValidateInput({ isOk, label, message, ...props }: Props) {
+export /*bundle*/ function ValidateInput({
+	isOk,
+	label,
+	errorMessage,
+	successMessage,
+	inputClassName,
+	...props
+}: Props) {
+	const displayMessage = props.value;
 	const cls = !isOk ? 'wrong' : 'ok';
+	const messageCls = !isOk ? 'error' : 'success';
+	const messageToDisplay = isOk ? successMessage : errorMessage;
+	const displayMessageCls = displayMessage ? 'display-message' : '';
 
 	return (
-		<div className={`essential__validate-input ${cls}`}>
-			<Input label={label} {...props} />
-			<span className="error-message">{message}</span>
+		<div className={`essential__validate-input ${cls} ${displayMessageCls}`}>
+			<Input {...props} inputClassName={inputClassName} label={label} />
+			<span className={`message ${messageCls}`}>{messageToDisplay}</span>
 		</div>
 	);
 }

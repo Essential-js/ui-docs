@@ -1,8 +1,8 @@
 .essential__validate-input {
 	position: relative;
 
-	&.wrong {
-		.error-message {
+	&.display-message {
+		.message {
 			transform: translateY(0);
 			font-size: 0.8rem;
 		}
@@ -12,11 +12,17 @@
 		z-index: 2;
 	}
 
-	.error-message {
-		color: var(--error);
+	.message {
 		position: absolute;
 		transform: translateY(-2rem);
 		transition: all 0.2s ease-out;
 		left: 1rem;
+
+		&.error {
+			color: var(--error);
+		}
+		&.success {
+			color: var(--success);
+		}
 	}
 }

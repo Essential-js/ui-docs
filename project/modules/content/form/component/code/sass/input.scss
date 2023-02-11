@@ -1,45 +1,136 @@
 .essential__input,
 .essential__textarea {
 	border-radius: var(--input-border-radius);
-	border: var(--border-width) solid var(--accent);
+	border: var(--border-width) solid transparent;
+	background: var(--secondary-background);
 	position: relative;
 	display: grid;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0 0.8rem;
 
 	label {
-		color: var(--disabled);
-		font-size: 0.95rem;
+		color: var(--disabled-text);
+		font-size: 1rem;
 		position: absolute;
-		left: 0.8rem;
+		left: 0rem;
 
 		transition: all 0.2s ease-out;
-		transform: translateY(0.6rem);
 	}
 
-	input,
-	textarea {
-		background: var(--background);
-		border-radius: var(--input-border-radius);
-		outline: transparent;
-		font-size: 1rem;
-		border: 0;
+	.input__container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		position: relative;
 
-		padding: 0.6rem 0.8rem;
+		input,
+		textarea {
+			background: var(--secondary-background);
+			border-radius: var(--input-border-radius);
+			outline: transparent;
+			font-size: 1rem;
+			border: 0;
+			width: 100%;
 
-		&:focus ~ label {
-			color: var(--text-color);
-			font-size: 0.8rem;
-			transform: translateY(-1.4rem);
+			padding: 0.6rem 0;
+
+			&:disabled {
+				color: var(--disabled-text);
+			}
+
+			&:focus ~ label {
+				color: var(--text-color);
+				transform: translateY(-2.2rem);
+			}
+
+			&:not(:focus)::placeholder {
+				color: transparent;
+			}
+
+			&:not(:placeholder-shown) ~ label {
+				color: var(--text-color);
+				transform: translateY(-2.2rem);
+			}
+
+			&[type='password']::-ms-reveal,
+			&[type='password']::-ms-clear {
+				display: none;
+			}
 		}
 
-		&:not(:focus)::placeholder {
-			color: transparent;
+		.password__icon {
+			cursor: pointer;
+			position: absolute;
+			right: 0;
 		}
+	}
 
-		&:not(:placeholder-shown) ~ label {
-			color: var(--text-color);
-			font-size: 0.8rem;
-			transform: translateY(-1.4rem);
+	&.bordered {
+		border: var(--border-width) solid var(--accent);
+	}
+
+	&.success {
+		background: var(--success);
+
+		&.bordered {
+			background: transparent;
+			border: 3px solid var(--success);
+			box-shadow: none;
+
+			.input__container {
+				input {
+					background: transparent;
+				}
+			}
+		}
+	}
+	&.error {
+		background: var(--error);
+
+		&.bordered {
+			background: transparent;
+			border: 3px solid var(--error);
+			box-shadow: none;
+
+			.input__container {
+				input {
+					background: transparent;
+				}
+			}
+		}
+	}
+	&.warning {
+		background: var(--warning);
+
+		&.bordered {
+			background: transparent;
+			border: 3px solid var(--warning);
+			box-shadow: none;
+
+			.input__container {
+				input {
+					background: transparent;
+				}
+			}
+		}
+	}
+	&.info {
+		background: var(--info);
+
+		&.bordered {
+			background: transparent;
+			border: 3px solid var(--info);
+			box-shadow: none;
+
+			.input__container {
+				input {
+					background: transparent;
+				}
+			}
 		}
 	}
 }

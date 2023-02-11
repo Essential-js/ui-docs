@@ -8,6 +8,7 @@ const DEFAULT_CONTENT = 'NotFound';
 export /*bundle*/
 function View({ uri }) {
 	const { current: lang } = beyond.languages;
+	console.log(beyond.languages);
 	const Contents = lang === 'es' ? ContentsESP : ContentsEN;
 	const content = uri.vars.get('content');
 	const contentId = !content ? DEFAULT_CONTENT : content;

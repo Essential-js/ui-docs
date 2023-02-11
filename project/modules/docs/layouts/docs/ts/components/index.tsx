@@ -12,7 +12,7 @@ interface IComponent {
 }
 
 export function Sidebar() {
-	const [open, setOpen] = React.useState<null | string>(null);
+	const [open, setOpen] = React.useState<null | string>('Form');
 
 	const componentsElements = config.params.menu.map((component: IComponent) => {
 		if (component?.subComponents.length > 0) {
