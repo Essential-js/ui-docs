@@ -4,6 +4,7 @@ import { Button } from '@essential-js/ui/buttons';
 import { RefreshCircle, Danger } from 'iconsax-react';
 import { Modal, ConfirmModal, SuccessModal, ErrorModal, InfoModal } from '@essential-js/ui/modals';
 import { ConfirmModalImplementation } from './implementations';
+import { ElementTitle as El } from '@essential-js/ui/menu';
 
 // Imports //
 
