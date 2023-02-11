@@ -22,7 +22,7 @@ export /*bundle*/ function ConfirmModal({ children, title, onConfirm, onCancel, 
 				<Button onClick={onCancel} className="cancel">
 					<span>{cancelText}</span>
 				</Button>
-				<Button onClick={onConfirm} className="confirm">
+				<Button onClick={onConfirm} className="confirm success">
 					<span>{confirmText}</span>
 				</Button>
 			</footer>
