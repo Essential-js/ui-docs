@@ -1,5 +1,5 @@
 {
-	"name": "views/en",
+	"name": "docs/en",
 	"code": {
 		"mdx": {
 			"files": ["*"]

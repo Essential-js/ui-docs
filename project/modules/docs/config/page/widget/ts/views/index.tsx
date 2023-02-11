@@ -1,6 +1,6 @@
 import * as React from 'react';
-import * as ContentsESP from '@essential-js/ui/views/esp';
-import * as ContentsEN from '@essential-js/ui/views/en';
+import * as ContentsESP from '@essential-js/ui/docs/esp';
+import * as ContentsEN from '@essential-js/ui/docs/en';
 import { beyond } from '@beyond-js/kernel/core';
 
 const DEFAULT_CONTENT = 'NotFound';
