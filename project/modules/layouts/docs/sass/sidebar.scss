@@ -1,0 +1,89 @@
+.sidebar {
+	&__header {
+		width: 100%;
+
+		.logo {
+			width: 100%;
+
+			h1 {
+				width: 100%;
+
+				a {
+					text-decoration: none;
+					display: grid;
+					place-content: center;
+
+					p {
+						text-align: center;
+					}
+
+					.icon {
+						margin: 0 auto;
+					}
+				}
+
+				&:hover {
+					a {
+						p {
+							span {
+								color: var(--accent);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__nav {
+		.sidebar__list {
+			.sidebar-item {
+				cursor: pointer;
+				width: 100%;
+				padding: 0.5rem 0;
+				height: min-content;
+				transition: all 0.2s ease-in-out;
+
+				a {
+					font-size: 0.95rem;
+					height: 100%;
+					padding: 0 1rem;
+					display: inherit;
+				}
+
+				&.dropdown {
+					a {
+						padding: 0 0.5rem 0 1rem;
+						display: grid;
+						grid-template-columns: calc(100% - 20px) 20px;
+
+						.icon {
+							width: 20px;
+							height: 20px;
+						}
+					}
+
+					.sub-list {
+						padding: 1rem 0.2rem 0 0.2rem;
+
+						.sidebar-item {
+							&:hover,
+							&.open {
+								background: var(--secondary-background);
+							}
+						}
+					}
+				}
+
+				&:hover,
+				&.open {
+					background: var(--accent);
+				}
+
+				&:active {
+					background: var(--accent-active);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.layout {
+	height: 100%;
+	min-height: 100vh;
+	display: grid;
+
+	.sidebar.open ~ main {
+		padding: 0 2rem 0 332px;
+	}
+
+	main {
+		transition: all 0.2s ease-in-out;
+		padding: 0 2rem 0 7rem;
+		display: flow-root;
+		height: 100%;
+		width: 100%;
+	}
+}

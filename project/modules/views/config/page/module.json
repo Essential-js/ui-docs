@@ -3,6 +3,7 @@
 	"widget": {
 		"route": "/${content}",
 		"is": "page",
+		"layout": "docs-layout",
 		"ts": {
 			"path": "/widget/ts",
 			"files": ["*"]

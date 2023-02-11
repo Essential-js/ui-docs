@@ -1,0 +1,17 @@
+{
+	"name": "layout/docs",
+	"widget": {
+		"is": "layout",
+		"element": {
+			"name": "docs-layout"
+		},
+		"sass": {
+			"path": "sass",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "ts",
+			"files": ["*"]
+		}
+	}
+}
