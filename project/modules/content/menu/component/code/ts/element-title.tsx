@@ -10,7 +10,7 @@ interface Props extends HTMLElement {
 const DEFAULT_APARITION_TIME = 500;
 const DEFAULT_OFFSET = 10;
 
-export /*bundle*/ function Tooltip({ offsetX = DEFAULT_OFFSET, offsetY = DEFAULT_OFFSET, children, aparitionTime = DEFAULT_APARITION_TIME, message, ...props }: Props) {
+export /*bundle*/ function ElementTitle({ offsetX = DEFAULT_OFFSET, offsetY = DEFAULT_OFFSET, children, aparitionTime = DEFAULT_APARITION_TIME, message, ...props }: Props) {
 	const [showTooltip, setShowTooltip] = React.useState(false);
 	const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
 	const tooltipRef = React.useRef(null);
@@ -43,11 +43,11 @@ export /*bundle*/ function Tooltip({ offsetX = DEFAULT_OFFSET, offsetY = DEFAULT
 	}
 
 	return (
-		<div {...props} ref={tooltipRef} className="essential__tooltip" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove}>
+		<div {...props} ref={tooltipRef} className="essential__title" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove}>
 			<div ref={messageRef}>{children}</div>
 			{showTooltip && (
 				<div
-					className="tooltip"
+					className="title__element"
 					style={{
 						top: mousePosition.y + offsetY,
 						left: mousePosition.x + offsetX,

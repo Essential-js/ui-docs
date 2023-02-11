@@ -1,6 +1,6 @@
 @mixin properties() {
-	--background: #121212;
-	--secondary-background: #202020;
+	--background: #000;
+	--secondary-background: #16181a;
 	--accent: #169ab7;
 	--accent-hover: #08bce3;
 	--accent-active: #106679;
@@ -15,4 +15,11 @@
 	--text-error: #7a0303;
 	--warning: #ff9800;
 	--text-warning: #ed6c02;
+
+	// UTILS
+	--acent-border-radius: 9999px;
+	--input-border-radius: 0.75rem;
+	--card-border-radius: 14px;
+	--border-width: 3px;
+	--disabled-text: #666;
 }

@@ -15,10 +15,10 @@ export /*bundle*/ function Dropdown({ title = '', children, ...props }: Props) {
 
 	return (
 		<section className={`essential__dropdown ${props.className}`} {...props}>
-			<div className={`title ${cls}`} onClick={toggleOpen}>
+			<header className={`title__element ${cls}`} onClick={toggleOpen}>
 				<h6>{title}</h6>
 				<ArrowRight2 className="icon" />
-			</div>
+			</header>
 			{isOpen && <div className="content">{children}</div>}
 		</section>
 	);

@@ -1,6 +1,11 @@
 .essential__copyable-code {
+	background: var(--secondary-background);
+	border-radius: var(--card-border-radius);
 	display: flex;
 	flex-direction: column;
+	max-height: 350px;
+	position: relative;
+	padding: 1rem 0;
 
 	.title {
 		background: var(--secondary-background);
@@ -19,15 +24,23 @@
 
 	.content {
 		background: var(--secondary-background);
+		border-radius: var(--card-border-radius);
 		white-space: pre;
+		max-height: 350px;
+		overflow-y: auto;
 		font-size: 0.95rem;
 
-		padding: 1.5rem 2rem;
+		padding: 0 1.5rem;
 
 		display: grid;
 		grid-template-columns: calc(100% - 24px) 24px;
 
 		.icon {
+			position: absolute;
+			top: 0.8rem;
+			right: 1rem;
+
+			width: 20px;
 			cursor: pointer;
 			transition: transform 0.1s ease-out;
 

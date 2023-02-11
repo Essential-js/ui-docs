@@ -8,7 +8,7 @@ interface Props extends Partial<HTMLButtonElement> {
 
 export /*bundle*/ function Button({ children, showIcon, icon, ...props }: Props) {
 	return (
-		<button {...props} className={`essential__button ${props.className}`}>
+		<button {...props} className={`essential__button secondary ${props.className}`}>
 			{showIcon && icon}
 			{children}
 		</button>

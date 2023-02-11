@@ -17,14 +17,9 @@ export /*bundle*/ function CopyableCode({ title, children, className, ...props }
 
 	return (
 		<div className={`essential__copyable-code ${className}`} {...props}>
-			{title && (
-				<div className="title">
-					<h4>{title}</h4>
-				</div>
-			)}
 			<div className="content">
 				<Code>{children}</Code>
-				<Copy onClick={copy} className="icon" />
+				<Copy onClick={copy} className="icon" color="#666" />
 			</div>
 		</div>
 	);

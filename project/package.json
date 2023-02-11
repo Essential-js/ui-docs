@@ -1,10 +1,153 @@
 {
-	"name": "@essential-js-js/ui",
+	"name": "ui",
 	"version": "0.0.1",
 	"private": "true",
 	"description": "Essential UI is a collection of reusable components",
 	"author": "bryantdev_",
 	"license": "MIT",
+	"scope": "essential-js",
+	"title": "Essential UI",
+	"layout": "main-layout",
+	"template": "template/template.json",
+	"languages": {
+		"default": "en",
+		"supported": [
+			"en",
+			"es"
+		]
+	},
+	"modules": {
+		"path": "modules"
+	},
+	"params": {
+		"menu": [
+			{
+				"name": "Form",
+				"path": "form/controller",
+				"subComponents": [
+					{
+						"name": "Controller",
+						"path": "form/controller"
+					},
+					{
+						"name": "Input",
+						"path": "form/input"
+					},
+					{
+						"name": "Validate input",
+						"path": "form/validate-input"
+					},
+					{
+						"name": "Switch",
+						"path": "form/switch"
+					},
+					{
+						"name": "Textarea",
+						"path": "form/textarea"
+					},
+					{
+						"name": "Buttons",
+						"path": "form/buttons"
+					}
+				]
+			},
+			{
+				"name": "Toasts",
+				"path": "toast",
+				"subComponents": [
+					{
+						"name": "Success",
+						"path": "toast/success"
+					},
+					{
+						"name": "Error",
+						"path": "toast/error"
+					},
+					{
+						"name": "Info",
+						"path": "toast/info"
+					},
+					{
+						"name": "Loading",
+						"path": "toast/loading"
+					}
+				]
+			},
+			{
+				"name": "Modals",
+				"path": "modals",
+				"subComponents": [
+					{
+						"name": "Info",
+						"path": "modals/info"
+					},
+					{
+						"name": "Confirm",
+						"path": "modals/confirm"
+					},
+					{
+						"name": "Error",
+						"path": "modals/error"
+					},
+					{
+						"name": "Success",
+						"path": "modals/success"
+					}
+				]
+			},
+			{
+				"name": "Menu",
+				"path": "menu/sidebar",
+				"subComponents": [
+					{
+						"name": "Sidebar",
+						"path": "menu/sidebar"
+					},
+					{
+						"name": "Table",
+						"path": "menu/table"
+					},
+					{
+						"name": "Tooltip",
+						"path": "menu/tooltip"
+					},
+					{
+						"name": "Card",
+						"path": "menu/card"
+					},
+					{
+						"name": "Tabs",
+						"path": "menu/tabs"
+					}
+				]
+			},
+			{
+				"name": "Dropdown",
+				"path": "dropdown",
+				"subComponents": []
+			}
+		]
+	},
+	"deployment": {
+		"distributions": [
+			{
+				"name": "web",
+				"environment": "development",
+				"platform": "web",
+				"ports": {
+					"bundles": 3002
+				}
+			},
+			{
+				"name": "npm",
+				"npm": {
+					"platforms": {
+						"web": "web"
+					}
+				}
+			}
+		]
+	},
 	"dependencies": {
 		"@beyond-js/react-widgets": "^18.20.4",
 		"iconsax-react": "^0.0.8",

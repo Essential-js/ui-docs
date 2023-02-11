@@ -20,7 +20,7 @@ class Toast extends ReactiveModel {
 		loading: RefreshCircle,
 	};
 
-	#defaultTypes = ['remove', 'info', 'success', 'error', 'loading'];
+	#defaultTypes = ['warning', 'info', 'success', 'error', 'loading'];
 
 	get current() {
 		return this.#current;

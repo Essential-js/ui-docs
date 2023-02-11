@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { DropdownSidebar } from '@essential-js/ui/menu';
-import { components } from '../components';
+import config from '@essential-js/ui/config';
 import { SidebarDropdown } from './sidebar-dropdown';
 import { SidebarItem } from './sidebar-item';
 import { Logo } from './logo';
@@ -14,7 +14,7 @@ interface IComponent {
 export function Sidebar() {
 	const [open, setOpen] = React.useState<null | string>(null);
 
-	const componentsElements = components.map((component: IComponent) => {
+	const componentsElements = config.params.menu.map((component: IComponent) => {
 		if (component?.subComponents.length > 0) {
 			return <SidebarDropdown key={component.path} component={component} open={open} setOpen={setOpen} />;
 		}

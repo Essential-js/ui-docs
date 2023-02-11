@@ -1,8 +1,10 @@
 .essential__dropdown {
 	margin: 0;
 	background: var(--secondary-background);
+	display: grid;
+	gap: 0;
 
-	.title {
+	.title__element {
 		cursor: pointer;
 		padding: 1rem 2rem;
 		display: grid;
@@ -25,6 +27,6 @@
 	}
 
 	.content {
-		padding: 1rem 2rem 2rem 2rem;
+		padding: 1rem 2rem 1rem 2rem;
 	}
 }

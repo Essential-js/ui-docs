@@ -1,0 +1,11 @@
+{
+	"name": "views/esp",
+	"code": {
+		"mdx": {
+			"files": ["*"]
+		},
+		"ts": {
+			"files": ["*"]
+		}
+	}
+}

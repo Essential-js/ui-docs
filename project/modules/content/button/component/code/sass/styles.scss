@@ -1,7 +1,9 @@
 .essential__button {
 	background: var(--accent);
+	border-radius: var(--acent-border-radius);
 	padding: 0.5rem 2rem;
 	cursor: pointer;
+	border: 3px solid transparent;
 
 	transition: background 0.2s ease-out;
 
@@ -11,5 +13,26 @@
 
 	&:active {
 		background: var(--accent-active);
+	}
+
+	&.secondary {
+		background: transparent;
+		border: 3px solid var(--accent);
+
+		&:hover {
+			background: var(--accent);
+			border: 3px solid transparent;
+		}
+
+		&:active {
+			background: var(--accent-active);
+		}
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		border: 0;
+		background: var(--secondary-background);
+		color: var(--disabled-text);
 	}
 }
