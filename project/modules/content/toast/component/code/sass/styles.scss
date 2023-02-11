@@ -3,6 +3,7 @@
 	position: absolute;
 	display: grid;
 	gap: 1rem;
+	z-index: 999;
 
 	.toast {
 		border-radius: 10px;

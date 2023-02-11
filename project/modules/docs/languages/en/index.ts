@@ -11,7 +11,11 @@ import {
 } from 'iconsax-react';
 import { Modal, ConfirmModal, SuccessModal, ErrorModal, InfoModal } from '@essential-js/ui/modals';
 import { ElementTitle as El } from '@essential-js/ui/menu';
-import { Input as _input, ValidateInput as _validateInput } from '@essential-js/ui/form';
+import {
+	Input as _input,
+	ValidateInput as _validateInput,
+	Textarea as _texta,
+} from '@essential-js/ui/form';
 import {
 	ValidateInputImplementation,
 	ConfirmModalImplementation,

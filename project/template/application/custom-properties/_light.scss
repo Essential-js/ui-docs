@@ -1,14 +1,15 @@
 @mixin properties() {
+	// COLORS
 	--background: #000;
 	--secondary-background: #16181a;
 	--accent: #169ab7;
 	--accent-hover: #08bce3;
 	--accent-active: #106679;
 	--text-color: #f2ecff;
+	--disabled: #555555;
 
-	// accents
 	--success: #4caf50;
-	--text-sucess: #1b5e20;
+	--text-success: #1b5e20;
 	--info: #0288d1;
 	--text-info: #034a81;
 	--error: #ef5350;
@@ -19,7 +20,8 @@
 	// UTILS
 	--buttons-border-radius: 12px;
 	--input-border-radius: 0.75rem;
-	--card-border-radius: 14px;
 	--border-width: 3px;
-	--disabled-text: #666;
+	--card-border-radius: 14px;
+	--disabled-text: #6d767b;
+	--disabled-input: #26292b;
 }

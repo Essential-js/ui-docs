@@ -1,71 +1,51 @@
-.essential__input {
+.essential__textarea {
 	border-radius: var(--input-border-radius);
 	border: var(--border-width) solid transparent;
-	background: var(--secondary-background);
 	position: relative;
-	display: grid;
 	width: 100%;
-	display: flex;
-	align-items: center;
 	gap: 0.5rem;
-	padding: 0 0.8rem;
+	margin: 0.5rem 0;
 
 	label {
 		color: var(--disabled-text);
 		font-size: 1rem;
 		position: absolute;
-		left: 0rem;
+		left: 0.8rem;
 
+		transform: translateY(0.6rem);
 		transition: all 0.2s ease-out;
 	}
 
-	.input__container {
+	textarea {
+		min-height: 42px;
+		border-radius: var(--input-border-radius);
+		border: var(--border-width) solid transparent;
+		background: var(--secondary-background);
 		width: 100%;
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		position: relative;
+		padding: 0 0.8rem;
+		resize: vertical;
+		outline: transparent;
 
-		input {
-			background: var(--secondary-background);
-			border-radius: var(--input-border-radius);
-			outline: transparent;
-			font-size: 1rem;
-			border: 0;
-			width: 100%;
+		padding: 0.6rem 0.8rem;
 
-			padding: 0.6rem 0;
-
-			&:disabled {
-				cursor: not-allowed;
-				color: var(--disabled-text);
-				background: var(--disabled-input);
-			}
-
-			&:focus ~ label {
-				color: var(--text-color);
-				transform: translateY(-2.2rem);
-			}
-
-			&:not(:focus)::placeholder {
-				color: transparent;
-			}
-
-			&:not(:placeholder-shown) ~ label {
-				color: var(--text-color);
-				transform: translateY(-2.2rem);
-			}
-
-			&[type='password']::-ms-reveal,
-			&[type='password']::-ms-clear {
-				display: none;
-			}
+		&:disabled {
+			cursor: not-allowed;
+			color: var(--disabled-text);
+			background: var(--disabled-input);
 		}
 
-		.password__icon {
-			cursor: pointer;
-			position: absolute;
-			right: 0;
+		&:focus ~ label {
+			color: var(--text-color);
+			transform: translateY(-2.2rem);
+		}
+
+		&:not(:focus)::placeholder {
+			color: transparent;
+		}
+
+		&:not(:placeholder-shown) ~ label {
+			color: var(--text-color);
+			transform: translateY(-2.2rem);
 		}
 	}
 
