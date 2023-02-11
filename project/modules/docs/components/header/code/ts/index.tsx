@@ -7,7 +7,7 @@ interface Props extends Partial<HTMLElement> {
 
 export /*bundle*/ function Header({ pretitle, title, children }: Props) {
 	return (
-		<header className="header">
+		<header className="header-docs">
 			<h2>{pretitle}</h2>
 			<h1>{title}</h1>
 			{children}

@@ -6,10 +6,9 @@ import { toast } from '@essential-js/ui/toast';
 interface Props {
 	className: string;
 	children: string;
-	title: string;
 }
 
-export /*bundle*/ function CopyableCode({ title, children, className, ...props }: Props) {
+export /*bundle*/ function CopyableCode({ children, className, ...props }: Props) {
 	function copy() {
 		navigator.clipboard.writeText(children);
 		toast.info('The code has been copied!');
