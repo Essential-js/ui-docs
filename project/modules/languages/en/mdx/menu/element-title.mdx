@@ -1,0 +1,39 @@
+import { Header } from '@essential-js/ui-docs/header';
+import { CopyableCode } from '@essential-js/ui/code';
+import { Button } from '@essential-js/ui/buttons';
+import { ElementTitle } from '@essential-js/ui/menu';
+
+<Header pretitle="Menu" title="Element Title" />
+
+<CopyableCode>{`import {ElementTitle} from '@essential-js/ui/menu';`}</CopyableCode>
+
+<section>
+    	<div className="d-flex gap-1">
+        <ElementTitle message="This is a element title">
+            Hover me!!!
+        </ElementTitle>
+    	<ElementTitle message="This is a element title">
+            <Button className="info">Hover me too!</Button>
+        </ElementTitle>
+        </div>
+
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {ConfirmModal} from '@essential-js/ui/modals';
+
+function App() {
+return (
+
+<>
+	<ElementTitle message="This is a element title">Hover me !!!</ElementTitle>
+	<ElementTitle message="This is a element title">
+		<Button className="info">Hover to me to!!!</Button>
+	</ElementTitle>
+</>
+
+) } `}
+
+</CopyableCode>

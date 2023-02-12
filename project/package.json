@@ -1,12 +1,12 @@
 {
-	"name": "ui",
+	"name": "ui-docs",
 	"version": "0.0.1",
 	"private": "true",
 	"description": "Essential UI is a collection of reusable components",
 	"author": "bryantdev_",
 	"license": "MIT",
 	"scope": "essential-js",
-	"title": "Essential UI",
+	"title": "Essential UI Docs",
 	"layout": "main-layout",
 	"template": "template/template.json",
 	"languages": {
@@ -18,6 +18,11 @@
 	},
 	"modules": {
 		"path": "modules"
+	},
+	"libraries": {
+		"imports": [
+			"@essential-js/ui"
+		]
 	},
 	"params": {
 		"menu": [
@@ -62,7 +67,7 @@
 				"environment": "development",
 				"platform": "web",
 				"ports": {
-					"bundles": 3002
+					"bundles": 3003
 				}
 			},
 			{

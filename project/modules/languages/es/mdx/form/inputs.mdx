@@ -1,0 +1,217 @@
+import { Header } from '@essential-js/ui-docs/header';
+import { CopyableCode } from '@essential-js/ui/code';
+import { Button } from '@essential-js/ui/buttons';
+import { Input, ValidateInput } from '@essential-js/ui/form';
+import { SearchNormal1, CloseCircle, SmsNotification, ClipboardText } from 'iconsax-react';
+import { ValidateInputImplementation } from '../../implementations/index';
+
+<Header pretitle="Form" title="Input" />
+
+<CopyableCode>{"import {Input, ValidateInput} from '@essential-js/ui/form'"}</CopyableCode>
+
+<section>
+	<h3>Default types</h3>
+	<Input type="text" placeholder="Random text" label="Text" />
+	<Input type="email" placeholder="example@gmail.com" label="Mail" />
+	<Input type="password" placeholder="*******" label="Password" />
+	<Input type="tel" placeholder="+123456789" label="Telephone" />
+	<Input type="number" placeholder="100" label="Number" />
+	<Input
+		type="text"
+		disabled
+		placeholder="disabled"
+		value="This input is disabled"
+		label="Disabled"
+	/>
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {Input} from '@essential-js/ui/form';
+
+const INITIAL_STATE = {disabled: 'This input is disabled', text: '', email: '', password: '', tel: '', number: 100}
+
+function App() {
+const [formValues, setFormValues] = React.useState(INITIAL_STATE)
+
+        function handleChanges(event) {
+            const {value, name} = event.target;
+            setFormValues({...formValues, [name]: value})
+        }
+
+        return (
+           <>
+                <Input onChange={handleChanges} name="text" type="text" placeholder="Random text" label="Text" />
+                <Input onChange={handleChanges} name="email" type="email" placeholder="example@gmail.com" label="Mail" />
+                <Input onChange={handleChanges} name="password" type="password" placeholder="*******" label="Password" />
+                <Input onChange={handleChanges} name="tel" type="tel" placeholder="+123456789" label="Telephone" />
+                <Input onChange={handleChanges} name="number" type="number" placeholder="100" label="Number" />
+                <Input type="text" name="disabled" value={disabled} disabled placeholder="disabled" label="Disabled" />
+           </>
+        )
+    }
+
+`}
+
+</CopyableCode>
+
+<section>
+	<h3>Bordered types</h3>
+	<Input type="text" placeholder="Random text" className="success bordered" label="Text" />
+	<Input type="email" placeholder="example@gmail.com" className="error bordered" label="Mail" />
+	<Input type="password" placeholder="*******" className="warning bordered" label="Password" />
+	<Input type="tel" placeholder="+123456789" className="info bordered" label="Telephone" />
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {Input} from '@essential-js/ui/form';
+
+function App() {
+const [formValues, setFormValues] = React.useState({text: '', email: '', password: '', tel: '', number: 100})
+
+    function handleChanges(event) {
+        const {value, name} = event.target;
+        setFormValues({...formValues, [name]: value})
+    }
+
+        return (
+           <>
+             <Input
+                onChange={handleChanges}
+                className="success bordered"
+                name="text"
+                type="text"
+                placeholder="Random text"
+                label="Text"
+            />
+
+            <Input
+                onChange={handleChanges}
+                className="error bordered"
+                name="email"
+                type="email"
+                placeholder="example@gmail.com"
+                label="Mail"
+            />
+
+            <Input
+                onChange={handleChanges}
+                className="warning bordered"
+                name="password"
+                type="password"
+                placeholder="*******"
+                label="Password"
+            />
+
+            <Input
+                onChange={handleChanges}
+                className="info bordered"
+                name="tel"
+                type="tel"
+                placeholder="+123456789"
+                label="Telephone"
+            />
+           </>
+        )
+    }
+
+`}
+
+</CopyableCode>
+<section>
+	<h3>Validate type</h3>
+	<ValidateInputImplementation />
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {ValidateInput} from '@essential-js/ui/form';
+
+const REGEX = /.{5,16}/;
+function App() {
+const [value, setValue] = React.useState('');
+
+        function onChange(event: { target: { value: string } }) {
+            const { value } = event.target;
+            setValue(value);
+        }
+
+        const inputValidation = REGEX.test(value);
+
+    return (
+
+        <ValidateInput
+            value={value}
+            onChange={onChange}
+            isOk={inputValidation}
+            label="Insert a password"
+            type="password"
+            errorMessage="The password has to have at least 5 letters"
+            successMessage="Ready!"
+            placeholder="*****"
+        />
+
+    );
+
+}
+
+`}
+
+</CopyableCode>
+
+<section>
+	<h3>With icon</h3>
+	<Input
+		type="text"
+		before={<ClipboardText />}
+		placeholder="Random text"
+		className="success bordered"
+		label="Text"
+	/>
+	<Input
+		after={<SmsNotification />}
+		type="email"
+		placeholder="example@gmail.com"
+		className="error bordered"
+		label="Mail"
+	/>
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {Input} from '@essential-js/ui/form';
+
+function App() {
+const [formValues, setFormValues] = React.useState({text: '', email: '', password: '', tel: '', number: 100})
+
+        function handleChanges(event) {
+            const {value, name} = event.target;
+            setFormValues({...formValues, [name]: value})
+        }
+
+        return (
+            <Input
+    	        type="text"
+    	        before={<ClipboardText />}
+    	        placeholder="Random text"
+    	        className="success bordered"
+    	        label="Text"
+            />
+            <Input
+        	after={<SmsNotification />}
+    	        type="email"
+    	        placeholder="example@gmail.com"
+    	        className="error bordered"
+    	        label="Mail"
+            />
+        )
+    }
+
+`}
+
+</CopyableCode>

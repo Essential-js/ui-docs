@@ -1,0 +1,181 @@
+import { Header } from '@essential-js/ui-docs/header';
+import { CopyableCode } from '@essential-js/ui/code';
+import { Button } from '@essential-js/ui/buttons';
+import { Modal, ConfirmModal, SuccessModal, ErrorModal, InfoModal } from '@essential-js/ui/modals';
+import {
+	ConfirmModalImplementation,
+	ErrorModalImplementation,
+	SuccessModalImplementation,
+	ModalImplementation,
+	InfoModalImplementation,
+} from '../../implementations';
+
+<Header pretitle="Utils" title="Modals" />
+
+<CopyableCode>{"import {Modal} from '@essential-js/ui/modals';"}</CopyableCode>
+
+<section>
+    <h3>Confirm</h3>
+
+    <div className="d-flex gap-1">
+    	<ConfirmModalImplementation />
+    </div>
+
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {ConfirmModal} from '@essential-js/ui/modals';
+
+function App() {
+const [displayModal, setDisplayModal] = React.useState(false);
+
+    function toggleHide() {
+        setDisplayModal(!displayModal);
+    }
+
+    function handleConfirm() {
+        setDisplayModal(!displayModal)
+    }
+
+    function handleCancel() {
+        setDisplayModal(!displayModal)
+    }
+
+return (
+
+<>
+	<Button className="success" onClick={toggleHide}>
+		Display confirm modal
+	</Button>
+	{displayModal && (
+		<ConfirmModal
+			cancelText="Cancel"
+			confirmText="Confirm"
+			onConfirm={handleConfirm}
+			onCancel={handleCancel}
+			title="Please confirm to continue"
+			onHide={toggleHide}>
+			This is the basic implementation of modal confirm
+		</ConfirmModal>
+	)}
+</>
+
+) } `}
+
+</CopyableCode>
+
+<section>
+    <h3>Info</h3>
+
+    <div className="d-flex gap-1">
+    	<InfoModalImplementation />
+    </div>
+
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {InfoModal} from '@essential-js/ui/modals';
+
+function App() {
+const [displayModal, setDisplayModal] = React.useState(false);
+
+    function toggleHide() {
+    	setDisplayModal(!displayModal);
+    }
+
+    return (
+    	<>
+    		<Button className="info" onClick={toggleHide}>
+    			Display Info Modal
+    		</Button>
+    		{displayModal && (
+    			<InfoModal title="Lets imagine theres a awesome information!" onHide={toggleHide}>
+    				This is the basic implementation of modal info
+    			</InfoModal>
+    		)}
+    	</>
+    );
+
+) } `}
+
+</CopyableCode>
+
+<section>
+    <h3>Error</h3>
+
+    <div className="d-flex gap-1">
+    	<ErrorModalImplementation />
+    </div>
+
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {ErrorModal} from '@essential-js/ui/modals';
+
+function App() {
+const [displayModal, setDisplayModal] = React.useState(false);
+
+    function toggleHide() {
+    	setDisplayModal(!displayModal);
+    }
+
+    return (
+    	<>
+    		<Button className="error" onClick={toggleHide}>
+    			Display error modal
+    		</Button>
+    		{displayModal && (
+    			<ErrorModal title="Error!" onHide={toggleHide}>
+    				This is the basic implementation of modal error
+    			</ErrorModal>
+    		)}
+    	</>
+    );
+
+) } `}
+
+</CopyableCode>
+
+<section>
+    <h3>Default</h3>
+
+    <div className="d-flex gap-1">
+    	<ModalImplementation />
+    </div>
+
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {Modal} from '@essential-js/ui/modals';
+
+function App() {
+const [displayModal, setDisplayModal] = React.useState(false);
+
+    function toggleHide() {
+    	setDisplayModal(!displayModal);
+    }
+
+    return (
+    	<>
+    		<Button className="info" onClick={toggleHide}>
+    			Display Modal
+    		</Button>
+    		{displayModal && (
+    			<Modal onHide={toggleHide}>
+    				This is a regular modal implementation
+    			</Modal>
+    		)}
+    	</>
+    );
+
+) } `}
+
+</CopyableCode>

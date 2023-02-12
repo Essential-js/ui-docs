@@ -1,0 +1,23 @@
+.home__footer {
+	padding: 5rem 0 2.5rem 0;
+	display: grid;
+
+	.created-by,
+	.created-with {
+		font-family: var(--secondary-font-family);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.credits {
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.2s ease-in-out;
+
+			&:hover {
+				color: var(--accent);
+			}
+		}
+	}
+}

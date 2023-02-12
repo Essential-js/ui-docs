@@ -1,0 +1,135 @@
+import { Header } from '@essential-js/ui-docs/header';
+import { CopyableCode } from '@essential-js/ui/code';
+import { Button } from '@essential-js/ui/buttons';
+import { RefreshCircle, Danger } from 'iconsax-react';
+
+<Header pretitle="Form" title="Buttons" />
+
+<CopyableCode>{"import {Button} from '@essential-js/ui/buttons';"}</CopyableCode>
+
+<section>
+    <h3>Default Types</h3>
+
+    <div className="d-flex gap-1">
+    	<Button className="default">Default</Button>
+    	<Button className="bordered">Bordered</Button>
+    	<Button disabled>Disabled</Button>
+    </div>
+
+</section>
+
+<CopyableCode>
+{`
+import {Button} from '@essential-js/ui/buttons';
+
+function App() {
+
+return (
+
+<>
+	<Button className="default">Default</Button>
+	<Button className="bordered">Bordered</Button>
+	<Button disabled>Disabled</Button>
+</>
+) } `}
+
+</CopyableCode>
+
+<section>
+    <h3>Regular types</h3>
+
+    <div className="d-flex gap-1">
+    	<Button className="success">Success</Button>
+    	<Button className="info">Info</Button>
+    	<Button className="error">Error</Button>
+    	<Button className="warning">Warning</Button>
+    </div>
+
+</section>
+
+<CopyableCode>
+{`
+import {Button} from '@essential-js/ui/buttons';
+
+function App() {
+
+return (
+
+<>
+	<Button className="success">Success</Button>
+	<Button className="info">Info</Button>
+	<Button className="error">Error</Button>
+	<Button className="warning">Warning</Button>
+</>
+) } `}
+
+</CopyableCode>
+
+<section>
+    <h3>Using shadows</h3>
+
+    <div className="d-flex gap-1">
+    	<Button className="success shadow">Success</Button>
+    	<Button className="info shadow">Info</Button>
+    	<Button className="error shadow">Error</Button>
+    	<Button className="warning shadow">Warning</Button>
+    </div>
+
+</section>
+
+<CopyableCode>
+{`
+import {Button} from '@essential-js/ui/buttons';
+
+function App() {
+
+return (
+
+<>
+	<Button className="success shadow">Success</Button>
+	<Button className="info shadow">Info</Button>
+	<Button className="error shadow">Error</Button>
+	<Button className="warning shadow">Warning</Button>
+</>
+) } `}
+
+</CopyableCode>
+
+<section>
+    <h3>Combinations</h3>
+
+    <div className="d-flex gap-1">
+    	<Button className="success">Success</Button>
+    	<Button className="info shadow">Info</Button>
+    	<Button className="error bordered">Error</Button>
+    	<Button className="warning bordered shadow">Warning</Button>
+        <Button className="warning" after={<Danger size="16"/>}>Warning</Button>
+    	<Button disabled before={<RefreshCircle size="16"/>}>Loading</Button>
+
+    </div>
+
+</section>
+
+<CopyableCode>
+{`
+import {Button} from '@essential-js/ui/buttons';
+
+function App() {
+
+return (
+
+<>
+	<Button className="success">Success</Button>
+	<Button className="info shadow">Info</Button>
+	<Button className="error bordered">Error</Button>
+	<Button className="warning bordered shadow">Warning</Button>
+	<Button className="warning" after={<Danger size="16" />}>
+		Warning
+	</Button>
+	<Button disabled before={<RefreshCircle size="16" />}>
+		Loading
+	</Button>
+</>
+) } `}
+
+</CopyableCode>
