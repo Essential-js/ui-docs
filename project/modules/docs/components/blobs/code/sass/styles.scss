@@ -1,0 +1,48 @@
+.first-blob {
+	fill: var(--accent);
+	top: 0;
+	right: 0;
+	animation: pulse 5s ease-in-out infinite alternate;
+}
+
+.second-blob {
+	fill: #900d87;
+	top: 400px;
+	left: 100px;
+	transition: all 2s ease-in-out;
+	animation: pulse 2s ease-in-out infinite alternate;
+}
+
+.third-blob {
+	fill: #6a00f4;
+	top: 50px;
+	left: 100px;
+	animation: pulse 4s ease-in-out infinite alternate;
+}
+
+.four-blob {
+	fill: #0c63e7;
+	bottom: 20px;
+	right: 20px;
+	animation: pulse 3s ease-in-out infinite alternate;
+}
+
+.blob {
+	filter: blur(8rem);
+	width: 500px;
+	height: 500px;
+	position: fixed;
+	opacity: 0.5;
+}
+
+@keyframes pulse {
+	from {
+		filter: blur(8rem);
+		opacity: 0.5;
+	}
+
+	to {
+		filter: blur(12rem);
+		opacity: 0.9;
+	}
+}

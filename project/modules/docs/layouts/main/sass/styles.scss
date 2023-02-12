@@ -5,9 +5,9 @@
 
 	.home__main-layout {
 		transition: all 0.2s ease-in-out;
-		padding: 0 0 3rem 0;
 		display: flow-root;
 		height: 100%;
 		width: 100%;
+		position: relative;
 	}
 }

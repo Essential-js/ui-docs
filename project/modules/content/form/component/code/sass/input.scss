@@ -8,6 +8,14 @@
 	align-items: center;
 	gap: 0.5rem;
 
+	.after {
+		padding: 0 0.8rem 0 0;
+	}
+
+	.before {
+		padding: 0 0 0 0.8rem;
+	}
+
 	label {
 		color: var(--disabled-text);
 		font-size: 1rem;
@@ -42,7 +50,7 @@
 
 			&:focus ~ label {
 				color: var(--text-color);
-				transform: translateY(-2.2rem);
+				transform: translateY(-2.4rem);
 			}
 
 			&:not(:focus)::placeholder {
@@ -51,7 +59,7 @@
 
 			&:not(:placeholder-shown) ~ label {
 				color: var(--text-color);
-				transform: translateY(-2.2rem);
+				transform: translateY(-2.4rem);
 			}
 
 			&[type='password']::-ms-reveal,

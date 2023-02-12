@@ -16,11 +16,11 @@ import { Textarea } from '@essential-js/ui/form';
 
 <CopyableCode>
 {`
-    import React from 'react';
-    import {Input} from '@essential-js/ui/form';
+import React from 'react';
+import {Input} from '@essential-js/ui/form';
 
-    function App() {
-        const [values, setValues] = React.useState({disabled: 'Im disabled!', regular: ''});
+function App() {
+const [values, setValues] = React.useState({disabled: 'Im disabled!', regular: ''});
 
         function handleChanges(event) {
             const {value, name} = event.target;
@@ -29,8 +29,20 @@ import { Textarea } from '@essential-js/ui/form';
 
         return (
             <>
-                <Textarea onChange={handleChanges} label="Insert your comment" value={values.regular} placeholder="Awesome comment!" />
-                <Textarea onChange={handleChanges} disabled value={values.disabled} label="Insert your comment" placeholder="Awesome comment!" />
+                <Textarea
+                    onChange={handleChanges}
+                    label="Insert your comment"
+                    value={values.regular}
+                    placeholder="Awesome comment!"
+                />
+
+                <Textarea
+                    onChange={handleChanges}
+                    disabled
+                    value={values.disabled}
+                    label="Insert your comment"
+                    placeholder="Awesome comment!"
+                />
             </>
         )
     }
@@ -51,16 +63,13 @@ import { Textarea } from '@essential-js/ui/form';
 
 <CopyableCode>
 {`
-    import React from 'react';
-    import {Input} from '@essential-js/ui/form';
+import React from 'react';
+import {Input} from '@essential-js/ui/form';
 
-    function App() {
-        const [values, setValues] = React.useState({
-            success: '',
-            error: '',
-            warning: '',
-            info: ''
-        });
+const INITIAL_STATE = {success: '', error: '', warning: '', info: ''};
+
+function App() {
+const [values, setValues] = React.useState(INITIAL_STATE);
 
         function handleChanges(event) {
             const {value, name} = event.target;

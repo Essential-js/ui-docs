@@ -27,31 +27,28 @@ import { ValidateInputImplementation } from '../../implementations/index';
 
 <CopyableCode>
 {`
-    import React from 'react';
-    import {Input} from '@essential-js/ui/form';
+import React from 'react';
+import {Input} from '@essential-js/ui/form';
 
-    function App() {
-        const [formValues, setFormValues] = React.useState({
-            disabled: 'This input is disabled',
-            text: '',
-            email: '',
-            password: '',
-            tel: '',
-            number: 100
-        })
+const INITIAL_STATE = {disabled: 'This input is disabled', text: '', email: '', password: '', tel: '', number: 100}
+
+function App() {
+const [formValues, setFormValues] = React.useState(INITIAL_STATE)
 
         function handleChanges(event) {
-            const {value, name} = event;
+            const {value, name} = event.target;
             setFormValues({...formValues, [name]: value})
         }
 
         return (
-            <Input onChange={handleChanges} name="text" type="text" placeholder="Random text" label="Text" />
-            <Input onChange={handleChanges} name="email" type="email" placeholder="example@gmail.com" label="Mail" />
-            <Input onChange={handleChanges} name="password" type="password" placeholder="*******" label="Password" />
-            <Input onChange={handleChanges} name="tel" type="tel" placeholder="+123456789" label="Telephone" />
-            <Input onChange={handleChanges} name="number" type="number" placeholder="100" label="Number" />
-            <Input type="text" name="disabled" value={disabled} disabled placeholder="disabled" label="Disabled" />
+           <>
+                <Input onChange={handleChanges} name="text" type="text" placeholder="Random text" label="Text" />
+                <Input onChange={handleChanges} name="email" type="email" placeholder="example@gmail.com" label="Mail" />
+                <Input onChange={handleChanges} name="password" type="password" placeholder="*******" label="Password" />
+                <Input onChange={handleChanges} name="tel" type="tel" placeholder="+123456789" label="Telephone" />
+                <Input onChange={handleChanges} name="number" type="number" placeholder="100" label="Number" />
+                <Input type="text" name="disabled" value={disabled} disabled placeholder="disabled" label="Disabled" />
+           </>
         )
     }
 
@@ -69,19 +66,20 @@ import { ValidateInputImplementation } from '../../implementations/index';
 
 <CopyableCode>
 {`
-    import React from 'react';
-    import {Input} from '@essential-js/ui/form';
+import React from 'react';
+import {Input} from '@essential-js/ui/form';
 
-    function App() {
-        const [formValues, setFormValues] = React.useState({text: '', email: '', password: '', tel: '', number: 100})
+function App() {
+const [formValues, setFormValues] = React.useState({text: '', email: '', password: '', tel: '', number: 100})
 
-        function handleChanges(event) {
-            const {value, name} = event;
-            setFormValues({...formValues, [name]: value})
-        }
+    function handleChanges(event) {
+        const {value, name} = event.target;
+        setFormValues({...formValues, [name]: value})
+    }
 
         return (
-            <Input
+           <>
+             <Input
                 onChange={handleChanges}
                 className="success bordered"
                 name="text"
@@ -104,7 +102,8 @@ import { ValidateInputImplementation } from '../../implementations/index';
                 className="warning bordered"
                 name="password"
                 type="password"
-                placeholder="*******" label="Password"
+                placeholder="*******"
+                label="Password"
             />
 
             <Input
@@ -115,6 +114,7 @@ import { ValidateInputImplementation } from '../../implementations/index';
                 placeholder="+123456789"
                 label="Telephone"
             />
+           </>
         )
     }
 
@@ -128,35 +128,34 @@ import { ValidateInputImplementation } from '../../implementations/index';
 
 <CopyableCode>
 {`
-    import React from 'react';
-    import {ValidateInput} from '@essential-js/ui/form';
+import React from 'react';
+import {ValidateInput} from '@essential-js/ui/form';
 
 const REGEX = /.{5,16}/;
 function App() {
 const [value, setValue] = React.useState('');
 
-    function onChange(event: { target: { value: string } }) {
-    	const { value } = event.target;
-    	setValue(value);
-    }
+        function onChange(event: { target: { value: string } }) {
+            const { value } = event.target;
+            setValue(value);
+        }
 
-    const inputValidation = REGEX.test(value);
+        const inputValidation = REGEX.test(value);
 
-return (
+    return (
 
-<div className="results">
-	<ValidateInput
-		value={value}
-		onChange={onChange}
-		isOk={inputValidation}
-		label="Insert a password"
-		type="password"
-		errorMessage="The password has to have at least 5 letters"
-		successMessage="Ready!"
-		placeholder="*****"
-	/>
-</div>
-);
+        <ValidateInput
+            value={value}
+            onChange={onChange}
+            isOk={inputValidation}
+            label="Insert a password"
+            type="password"
+            errorMessage="The password has to have at least 5 letters"
+            successMessage="Ready!"
+            placeholder="*****"
+        />
+
+    );
 
 }
 
@@ -184,14 +183,14 @@ return (
 
 <CopyableCode>
 {`
-    import React from 'react';
-    import {Input} from '@essential-js/ui/form';
+import React from 'react';
+import {Input} from '@essential-js/ui/form';
 
-    function App() {
-        const [formValues, setFormValues] = React.useState({text: '', email: '', password: '', tel: '', number: 100})
+function App() {
+const [formValues, setFormValues] = React.useState({text: '', email: '', password: '', tel: '', number: 100})
 
         function handleChanges(event) {
-            const {value, name} = event;
+            const {value, name} = event.target;
             setFormValues({...formValues, [name]: value})
         }
 

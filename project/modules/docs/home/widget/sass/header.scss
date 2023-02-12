@@ -1,0 +1,39 @@
+.home__header {
+	min-height: 100vh;
+	padding: 3rem;
+
+	display: grid;
+	place-content: center;
+	gap: 2rem;
+
+	&-main-content {
+		display: grid;
+		gap: 1rem;
+
+		h1 {
+			font-size: 3rem;
+			width: 70%;
+			font-family: var(--secondary-font-family);
+		}
+
+		p {
+			color: var(--disabled-text);
+			font-size: 1.5rem;
+			width: 80%;
+		}
+	}
+
+	.started {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3rem;
+
+		button {
+			border-radius: 30px;
+			font-size: 1rem;
+			font-weight: 700;
+			padding: 0.5rem 2.5rem;
+			display: flex;
+		}
+	}
+}

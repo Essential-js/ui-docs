@@ -33,13 +33,13 @@ export /*bundle*/ function Input({
 
 	return (
 		<div className={`essential__input ${props.className}`}>
-			{before}
+			{before && <div className="before">{before}</div>}
 			<div className="input__container">
 				<input {...props} type={customType} className={inputClassName} />
 				{Icon && <Icon className="password__icon" onClick={toggleDisplayPassword} />}
 				<label htmlFor={props.id}>{label}</label>
 			</div>
-			{after}
+			{after && <div className="after">{after}</div>}
 		</div>
 	);
 }

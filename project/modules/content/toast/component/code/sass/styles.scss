@@ -1,6 +1,6 @@
 .essential__toasts {
 	max-height: 100vh;
-	position: absolute;
+	position: fixed;
 	display: grid;
 	gap: 1rem;
 	z-index: 999;
