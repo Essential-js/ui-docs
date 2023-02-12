@@ -11,7 +11,7 @@ declare global {
 export function Layout() {
 	return (
 		<div className="layout">
-			<main>
+			<main className="home__main-layout">
 				<beyond-layout-children />
 			</main>
 		</div>

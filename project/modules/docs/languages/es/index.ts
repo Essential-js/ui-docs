@@ -12,8 +12,8 @@ import {
 import { Modal, ConfirmModal, SuccessModal, ErrorModal, InfoModal } from '@essential-js/ui/modals';
 import { ElementTitle as El } from '@essential-js/ui/menu';
 import {
-	Input as _input,
-	ValidateInput as _validateInput,
+	Input as inp,
+	ValidateInput as validateInp,
 	Textarea as texts,
 } from '@essential-js/ui/form';
 import {
@@ -32,7 +32,7 @@ import { default as _404 } from './mdx/404.mdx';
 
 import { default as _Buttons } from './mdx/form/buttons.mdx';
 import { default as _Controller } from './mdx/form/controller.mdx';
-import { default as _Input } from './mdx/form/input.mdx';
+import { default as _Inputs } from './mdx/form/inputs.mdx';
 import { default as _Switch } from './mdx/form/switch.mdx';
 import { default as _Textarea } from './mdx/form/textarea.mdx';
 import { default as _ValidateInput } from './mdx/form/validate-input.mdx';
@@ -56,7 +56,7 @@ import { default as _Toast } from './mdx/toast/index.mdx';
 export /*bundle*/ const NotFound = _404;
 export /*bundle*/ const Buttons = _Buttons;
 export /*bundle*/ const Controller = _Controller;
-export /*bundle*/ const Input = _Input;
+export /*bundle*/ const Inputs = _Inputs;
 export /*bundle*/ const Switch = _Switch;
 export /*bundle*/ const Textarea = _Textarea;
 export /*bundle*/ const ValidateInput = _ValidateInput;

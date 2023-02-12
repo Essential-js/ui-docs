@@ -1,14 +1,12 @@
 .layout {
 	height: 100%;
 	min-height: 100vh;
-	display: grid;
+	display: flex;
 
-	// .sidebar.open ~ main {
-	// }
-
-	main {
+	.main__contant {
 		transition: all 0.2s ease-in-out;
-		padding: 0 2rem 5rem 2rem;
+		width: calc(100% - 280px);
+		padding: 0 2rem 2rem 2rem;
 		display: flow-root;
 		height: 100%;
 		width: 100%;

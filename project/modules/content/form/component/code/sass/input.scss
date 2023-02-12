@@ -1,21 +1,19 @@
 .essential__input {
 	border-radius: var(--input-border-radius);
 	border: var(--border-width) solid transparent;
-	background: var(--secondary-background);
+
 	position: relative;
-	display: grid;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	padding: 0 0.8rem;
 
 	label {
 		color: var(--disabled-text);
 		font-size: 1rem;
 		position: absolute;
 		left: 0rem;
-
+		padding: 0 0.8rem;
 		transition: all 0.2s ease-out;
 	}
 
@@ -34,7 +32,7 @@
 			border: 0;
 			width: 100%;
 
-			padding: 0.6rem 0;
+			padding: 0.8rem;
 
 			&:disabled {
 				cursor: not-allowed;
@@ -65,7 +63,7 @@
 		.password__icon {
 			cursor: pointer;
 			position: absolute;
-			right: 0;
+			right: 0.8rem;
 		}
 	}
 

@@ -1,87 +1,117 @@
 .sidebar {
-	&__header {
-		width: 100%;
+	min-width: 280px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 
-		.logo {
-			width: 100%;
+	.content {
+		position: sticky;
+		top: 0px;
 
-			h1 {
-				width: 100%;
+		.logo-container {
+			cursor: pointer;
+			padding: 2rem 1.5rem;
 
-				a {
-					text-decoration: none;
-					display: grid;
-					place-content: center;
+			.logo {
+				font-size: 1.6rem;
+				font-weight: 200;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
 
-					p {
-						text-align: center;
-					}
-
-					.icon {
-						margin: 0 auto;
-					}
-				}
-
-				&:hover {
-					a {
-						p {
-							span {
-								color: var(--accent);
-							}
-						}
-					}
+				.beta-indicator {
+					font-family: var(--secondary-font-family);
+					font-weight: bold;
+					font-size: 0.8rem;
+					background: var(--accent);
+					padding: 0.2rem 0.8rem;
+					border-radius: 30px;
 				}
 			}
 		}
-	}
 
-	&__nav {
-		.sidebar__list {
-			.sidebar-item {
-				cursor: pointer;
-				width: 100%;
-				padding: 0.5rem 0;
-				height: min-content;
-				transition: all 0.2s ease-in-out;
+		nav {
+			h3 {
+				font-family: var(--secondary-font-family);
+				font-weight: bold;
+				padding: 0 0 0 1.5rem;
+			}
 
-				a {
-					font-size: 0.95rem;
-					height: 100%;
-					padding: 0 1rem;
-					display: inherit;
-				}
+			ul {
+				padding: 0 0 0 1.5rem;
 
-				&.dropdown {
-					a {
-						padding: 0 0.5rem 0 1rem;
-						display: grid;
-						grid-template-columns: calc(100% - 20px) 20px;
+				.section__container {
+					transition: all 0.2s ease-in-out;
+					margin: 18px 0;
 
-						.icon {
-							width: 20px;
-							height: 20px;
+					.section__item {
+						padding: 0.7rem 0;
+						cursor: pointer;
+
+						width: 100%;
+						display: flex;
+						align-items: center;
+						gap: 0.5rem;
+
+						button {
+							font-family: var(--secondary-font-family);
+							cursor: pointer;
+							background: transparent;
+							text-align: left;
+							font-weight: 400;
+							font-size: 1rem;
 						}
-					}
 
-					.sub-list {
-						padding: 1rem 0.2rem 0 0.2rem;
+						.arrow__icon-container {
+							display: flex;
+							align-items: center;
+							padding: 0 0 0 0.5rem;
 
-						.sidebar-item {
-							&:hover,
-							&.open {
-								background: var(--secondary-background);
+							.icon {
+								transition: all 0.2s ease-in-out;
+								width: 15px;
+							}
+						}
+
+						&.closed {
+							button {
+								color: var(--disabled-text);
+							}
+
+							.arrow__icon-container {
+								.icon {
+									transform: rotate(-90deg);
+								}
 							}
 						}
 					}
-				}
 
-				&:hover,
-				&.open {
-					background: var(--accent);
-				}
+					.component__item {
+						padding: 0.5rem 0 0.5rem 1.5rem;
+						display: flex;
+						align-items: center;
+						gap: 1rem;
 
-				&:active {
-					background: var(--accent-active);
+						.list-disc {
+							background-color: #636465;
+							border-radius: 50%;
+							width: 5px;
+							height: 5px;
+						}
+
+						a {
+							cursor: pointer;
+							font-family: var(--secondary-font-family);
+							font-weight: 500;
+							color: #9ba1a6;
+						}
+
+						&.active {
+							a {
+								color: var(--text-color);
+							}
+						}
+					}
 				}
 			}
 		}

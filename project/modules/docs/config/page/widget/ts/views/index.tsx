@@ -4,12 +4,12 @@ import * as ContentsEN from '@essential-js/ui/docs/en';
 import { beyond } from '@beyond-js/kernel/core';
 
 const DEFAULT_CONTENT = 'NotFound';
+const SPANISH = 'es';
 
 export /*bundle*/
 function View({ uri }) {
 	const { current: lang } = beyond.languages;
-	console.log(beyond.languages);
-	const Contents = lang === 'es' ? ContentsESP : ContentsEN;
+	const Contents = lang === SPANISH ? ContentsESP : ContentsEN;
 	const content = uri.vars.get('content');
 	const contentId = !content ? DEFAULT_CONTENT : content;
 
