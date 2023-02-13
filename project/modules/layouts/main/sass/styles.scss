@@ -1,3 +1,5 @@
+$tablet-breakpoint: 768px;
+
 .layout {
 	height: 100%;
 	min-height: 100vh;
@@ -9,5 +11,19 @@
 		height: 100%;
 		width: 100%;
 		position: relative;
+	}
+}
+
+@media (max-width: $tablet-breakpoint) {
+	.layout {
+		.essential__toasts {
+			top: 2rem;
+			right: 0px;
+			bottom: unset !important;
+			left: unset !important;
+
+			display: grid;
+			justify-content: center;
+		}
 	}
 }

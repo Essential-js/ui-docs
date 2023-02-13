@@ -2,7 +2,7 @@
 	"name": "ui-docs",
 	"version": "0.0.1",
 	"private": "true",
-	"description": "Essential UI is a collection of reusable components",
+	"description": "Essential UI official documentation.",
 	"author": "bryantdev_",
 	"license": "MIT",
 	"scope": "essential-js",

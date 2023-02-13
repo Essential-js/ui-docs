@@ -11,23 +11,18 @@ export function Header() {
 	return (
 		<header className="home__header">
 			<div className="home__header-main-content">
-				<h1>
-					Make the <span className="accent-mark">application of tomorrow</span> with the
-					components of the <span className="accent-mark">future</span>
-				</h1>
+				<h1>Reusable Useful Futuristic</h1>
 				<p>
-					Save yourself and your team time by using{' '}
-					<span className="accent-mark">Essential-UI's</span> pre-designed, fully
-					customizable and editable components, with a default theme that will make your{' '}
-					<span className="accent-mark">applications look like never before.</span>
+					Save yourself and your team time by using Essential-UI's pre-designed, fully
+					customizable and editable components.
 				</p>
 			</div>
 
 			<div className="started">
-				<Button onClick={goDocs} className="info">
+				<CopyableCode>npm i @essential-js/ui</CopyableCode>
+				<Button onClick={goDocs} className="default alter-bordered">
 					Get Started
 				</Button>
-				<CopyableCode>npm i @essential-js/ui</CopyableCode>
 			</div>
 		</header>
 	);

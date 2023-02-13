@@ -1,3 +1,5 @@
+$tablet-breakpoint: 1440px;
+
 .home__header {
 	min-height: 100vh;
 	padding: 3rem;
@@ -8,32 +10,44 @@
 
 	&-main-content {
 		display: grid;
+		align-items: center;
 		gap: 1rem;
 
 		h1 {
-			font-size: 3rem;
-			width: 70%;
+			text-align: center;
+			font-size: 5rem;
+			font-weight: bolder;
 			font-family: var(--secondary-font-family);
 		}
 
 		p {
 			color: var(--disabled-text);
 			font-size: 1.5rem;
-			width: 80%;
+			text-align: center;
+			padding: 0 22rem;
 		}
 	}
 
 	.started {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap: 3rem;
 
 		button {
-			border-radius: 30px;
+			border-radius: 5px;
 			font-size: 1rem;
-			font-weight: 700;
+			font-weight: 400;
 			padding: 0.5rem 2.5rem;
 			display: flex;
+		}
+
+		.essential__copyable-code {
+			border-radius: 5px;
+
+			.content {
+				padding: 0 1.5rem;
+			}
 		}
 	}
 }

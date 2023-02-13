@@ -9,7 +9,7 @@ export function Sidebar() {
 	));
 
 	return (
-		<aside className="sidebar">
+		<aside className="docs__sidebar">
 			<div className="content">
 				<Logo />
 

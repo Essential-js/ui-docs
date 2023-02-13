@@ -1,48 +1,48 @@
+$tablet-breakpoint: 768px;
+
 .first-blob {
-	fill: var(--accent);
-	top: 0;
-	right: 0;
-	animation: pulse 5s ease-in-out infinite alternate;
+	fill: var(--first-blob-color);
+	bottom: -200px;
+	right: -200px;
+
+	width: 700px;
+	height: 700px;
 }
 
 .second-blob {
-	fill: #900d87;
-	top: 400px;
-	left: 100px;
-	transition: all 2s ease-in-out;
-	animation: pulse 2s ease-in-out infinite alternate;
+	fill: var(--second-blob-color);
+	top: -200px;
+	left: -100px;
+
+	width: 600px;
+	height: 600px;
 }
 
 .third-blob {
-	fill: #6a00f4;
+	fill: var(--third-blob-color);
 	top: 50px;
 	left: 100px;
-	animation: pulse 4s ease-in-out infinite alternate;
 }
 
 .four-blob {
-	fill: #0c63e7;
-	bottom: 20px;
-	right: 20px;
-	animation: pulse 3s ease-in-out infinite alternate;
+	fill: var(--four-blob-color);
+	top: -100px;
+	right: -100px;
+
+	width: 300px;
+	height: 300px;
 }
 
 .blob {
 	filter: blur(8rem);
-	width: 500px;
-	height: 500px;
+
 	position: fixed;
-	opacity: 0.5;
+	opacity: 0.7;
+	transition: all 0.2s ease-in-out;
 }
 
-@keyframes pulse {
-	from {
-		filter: blur(8rem);
-		opacity: 0.5;
-	}
-
-	to {
-		filter: blur(12rem);
-		opacity: 0.9;
+@media (max-width: $tablet-breakpoint) {
+	.blob {
+		display: none;
 	}
 }

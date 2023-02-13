@@ -13,9 +13,6 @@ declare global {
 export function Layout() {
 	return (
 		<div className="layout">
-			<FourBlob />
-			<FirstBlob />
-			<SecondBlob />
 			<Toasts
 				position={{
 					bottom: '2rem',
