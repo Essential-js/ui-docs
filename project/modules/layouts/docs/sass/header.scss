@@ -1,0 +1,22 @@
+.docs__header {
+	padding: 2rem 2rem 0 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.right {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		.theme-toggler {
+			background: transparent;
+			border: 0;
+		}
+
+		.header__icon {
+			cursor: pointer;
+			width: 20px;
+		}
+	}
+}

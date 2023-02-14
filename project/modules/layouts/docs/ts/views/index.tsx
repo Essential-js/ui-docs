@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Sidebar } from '../sidebar/index';
 import { Toasts } from '@essential-js/ui/toast';
-import { ThirdBlob, FourBlob } from '@essential-js/ui-docs/blobs';
 import { Header } from '../header';
 
 declare global {
@@ -13,6 +12,8 @@ declare global {
 }
 
 export function Layout() {
+	const [isOpen, setIsOpen] = React.useState(false);
+
 	return (
 		<div className="docs__layout">
 			<Toasts
@@ -24,10 +25,10 @@ export function Layout() {
 
 			<div className="sub__layout">
 				<div className="infra__layout">
-					<Sidebar />
+					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
 					<main className="main__content">
-						<Header />
+						<Header setIsOpen={setIsOpen} />
 						<div className="docs">
 							<beyond-layout-children />
 						</div>

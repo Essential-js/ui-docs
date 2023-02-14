@@ -1,11 +1,44 @@
+$tablet-breakpoint: 1280px;
+
 .docs__layout {
 	height: 100%;
 	min-height: 100vh;
 
-	.sub__layout {
-		.docs__header {
-		}
+	@media (max-width: $tablet-breakpoint) {
+		.sub__layout {
+			.infra__layout {
+				.sidebar__container {
+					opacity: 0;
+					position: fixed;
+					left: -100%;
+					transition: all 0.2s ease-in-out;
 
+					&.open {
+						opacity: 1;
+						background: var(--sidebar-mobile-background);
+						width: 100%;
+						left: 0;
+						z-index: 9;
+
+						.docs__sidebar {
+							width: min-content;
+							background: var(--background);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: $tablet-breakpoint) {
+		.docs__header {
+			.sidebar-toggler {
+				opacity: 0;
+			}
+		}
+	}
+
+	.sub__layout {
 		.infra__layout {
 			display: flex;
 

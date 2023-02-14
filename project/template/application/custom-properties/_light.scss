@@ -17,7 +17,11 @@
 	--warning: #ff9800;
 	--text-warning: #ed6c02;
 	--default: var(--text-color);
-	--text-default: #f4f4f4;
+	--text-default: var(--background);
+
+	// Components
+	--header-border: #555;
+	--sidebar-mobile-background: #00000085;
 
 	// UTILS
 	--buttons-border-radius: 12px;

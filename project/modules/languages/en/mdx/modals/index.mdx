@@ -8,7 +8,7 @@ import {
 	SuccessModalImplementation,
 	ModalImplementation,
 	InfoModalImplementation,
-} from '../../implementations';
+} from '../../implementations/index';
 
 <Header pretitle="Utils" title="Modals" />
 
@@ -17,7 +17,7 @@ import {
 <section>
     <h3>Confirm</h3>
 
-    <div className="d-flex gap-1">
+    <div className="d-flex wrap gap-1">
     	<ConfirmModalImplementation />
     </div>
 
@@ -69,7 +69,7 @@ return (
 <section>
     <h3>Info</h3>
 
-    <div className="d-flex gap-1">
+    <div className="d-flex wrap gap-1">
     	<InfoModalImplementation />
     </div>
 
@@ -107,7 +107,7 @@ const [displayModal, setDisplayModal] = React.useState(false);
 <section>
     <h3>Error</h3>
 
-    <div className="d-flex gap-1">
+    <div className="d-flex wrap gap-1">
     	<ErrorModalImplementation />
     </div>
 
@@ -145,7 +145,7 @@ const [displayModal, setDisplayModal] = React.useState(false);
 <section>
     <h3>Default</h3>
 
-    <div className="d-flex gap-1">
+    <div className="d-flex wrap gap-1">
     	<ModalImplementation />
     </div>
 

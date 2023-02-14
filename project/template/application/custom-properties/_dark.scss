@@ -17,7 +17,7 @@
 	--warning: #ff9800;
 	--text-warning: #ed6c02;
 	--default: var(--text-color);
-	--text-default: #f4f4f4;
+	--text-default: var(--background);
 
 	// UTILS
 	--buttons-border-radius: 12px;
@@ -26,6 +26,10 @@
 	--card-border-radius: 14px;
 	--disabled-text: #6d767b;
 	--disabled-input: #26292b;
+
+	// Components
+	--header-border: #5555558a;
+	--sidebar-mobile-background: #00000085;
 
 	// Blobs
 	--first-blob-color: #7309a8;

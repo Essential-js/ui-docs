@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Toasts } from '@essential-js/ui/toast';
-import { FirstBlob, SecondBlob, FourBlob } from '@essential-js/ui-docs/blobs';
 
 declare global {
 	namespace JSX {

@@ -8,12 +8,15 @@ import { ElementTitle } from '@essential-js/ui/menu';
 <CopyableCode>{`import {ElementTitle} from '@essential-js/ui/menu';`}</CopyableCode>
 
 <section>
-    	<div className="d-flex gap-1">
+    	<div className="d-flex wrap gap-1">
         <ElementTitle message="This is a element title">
             Hover me!!!
         </ElementTitle>
     	<ElementTitle message="This is a element title">
             <Button className="info">Hover me too!</Button>
+        </ElementTitle>
+    	<ElementTitle aparitionTime={5000} message="This is a element title">
+            <Button className="error">Hover me and wait 5s!</Button>
         </ElementTitle>
         </div>
 
@@ -31,6 +34,9 @@ return (
 	<ElementTitle message="This is a element title">Hover me !!!</ElementTitle>
 	<ElementTitle message="This is a element title">
 		<Button className="info">Hover to me to!!!</Button>
+	</ElementTitle>
+	<ElementTitle aparitionTime={5000} message="This is a element title">
+		<Button className="error">Hover me and wait 5s!</Button>
 	</ElementTitle>
 </>
 

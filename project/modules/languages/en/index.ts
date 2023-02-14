@@ -12,9 +12,9 @@ import {
 import { Modal, ConfirmModal, SuccessModal, ErrorModal, InfoModal } from '@essential-js/ui/modals';
 import { ElementTitle as El } from '@essential-js/ui/menu';
 import {
-	Input as _input,
-	ValidateInput as _validateInput,
-	Textarea as _texta,
+	Input as inp,
+	ValidateInput as validateInp,
+	Textarea as texts,
 } from '@essential-js/ui/form';
 import {
 	ValidateInputImplementation,
