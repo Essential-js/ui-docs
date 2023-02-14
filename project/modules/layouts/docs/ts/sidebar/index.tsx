@@ -1,5 +1,5 @@
 import React from 'react';
-import config from '@essential-js/ui/config';
+import config from '@essential-js/ui-docs/config';
 import { Section, ISection } from './section';
 import { Logo } from './logo';
 
@@ -14,7 +14,6 @@ export function Sidebar({ isOpen, setIsOpen }: Props) {
 	));
 
 	function close() {
-		console.log('CLOSE');
 		setIsOpen(false);
 	}
 

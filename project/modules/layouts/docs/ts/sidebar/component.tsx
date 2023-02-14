@@ -1,5 +1,6 @@
 import React from 'react';
 import { routing } from '@beyond-js/kernel/routing';
+import { motion } from 'framer-motion';
 
 export interface IComponent {
 	name: string;
@@ -7,9 +8,10 @@ export interface IComponent {
 	path: string;
 	active: string | null;
 	setActive: React.Dispatch<React.SetStateAction<string | null>>;
+	index: number;
 }
 
-export function Component({ name, path, active, setActive }: IComponent) {
+export function Component({ name, path, active, setActive, index }: IComponent) {
 	function navigate(event: { preventDefault: () => void }) {
 		event.preventDefault();
 		setActive(path);
@@ -19,9 +21,13 @@ export function Component({ name, path, active, setActive }: IComponent) {
 	const activeCls = active === path ? 'active' : '';
 
 	return (
-		<li className={`component__item ${activeCls}`}>
+		<motion.li
+			initial={{ x: -20, opacity: [0, 0.2, 0.3] }}
+			animate={{ x: [0, 10, 0], opacity: [0.3, 0.6, 0.9, 1] }}
+			transition={{ type: 'easeInOut', delay: index * 0.1, duration: 0.4 }}
+			className={`component__item ${activeCls}`}>
 			<div className="list-disc"></div>
 			<a onClick={navigate}>{name}</a>
-		</li>
+		</motion.li>
 	);
 }

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as ContentsEN from '@essential-js/ui-docs/en';
+import { motion } from 'framer-motion';
 
 const DEFAULT_CONTENT = 'NotFound';
 
@@ -14,8 +15,11 @@ function View({ uri }) {
 	const Content = ContentsEN[name] || ContentsEN[DEFAULT_CONTENT];
 
 	return (
-		<div className="page__container">
+		<motion.div
+			initial={{ opacity: 0, y: 100 }}
+			animate={{ opacity: 1, y: 0 }}
+			className="page__container">
 			<Content />
-		</div>
+		</motion.div>
 	);
 }

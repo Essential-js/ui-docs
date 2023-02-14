@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component, IComponent } from './component';
 import { ArrowDown2, Box2, ColorSwatch } from 'iconsax-react';
+import { motion } from 'framer-motion';
 
 export interface ISection {
 	subComponents: Array<IComponent>;
@@ -23,11 +24,12 @@ export function Section({ name, icon, subComponents }: ISection) {
 		setIsOpen(!isOpen);
 	}
 
-	const output = subComponents.map((subComponent: IComponent) => (
+	const output = subComponents.map((subComponent: IComponent, index: number) => (
 		<Component
 			active={active}
 			setActive={setActive}
 			key={subComponent.name}
+			index={index}
 			{...subComponent}
 		/>
 	));
@@ -36,7 +38,11 @@ export function Section({ name, icon, subComponents }: ISection) {
 	const iconColor = !isOpen ? '#6d767b' : '#f2ecff';
 
 	return (
-		<div className="section__container">
+		<motion.div
+			initial={{ opacity: 0, x: [-5, 20] }}
+			animate={{ opacity: 1, x: [50] }}
+			transition={{ duration: 1, ease: 'easeInOut' }}
+			className="section__container">
 			<li className={`section__item ${cls}`} onClick={toggleOpen}>
 				<SectionIcon className="section__icon" variant="Bold" color={iconColor} />
 				<button>{name}</button>
@@ -46,6 +52,6 @@ export function Section({ name, icon, subComponents }: ISection) {
 			</li>
 
 			{isOpen && output}
-		</div>
+		</motion.div>
 	);
 }

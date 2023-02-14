@@ -34,12 +34,15 @@ $tablet-breakpoint: 1440px;
 		justify-content: center;
 		gap: 3rem;
 
-		button {
-			border-radius: 5px;
-			font-size: 1rem;
-			font-weight: 400;
-			padding: 0.5rem 2.5rem;
-			display: flex;
+		.button__container {
+			button {
+				border-radius: 5px;
+				font-size: 1rem;
+				font-weight: 400;
+				height: 100%;
+				padding: 0.5rem 2.5rem;
+				display: flex;
+			}
 		}
 
 		.essential__copyable-code {

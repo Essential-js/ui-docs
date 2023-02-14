@@ -15,10 +15,5 @@
 		"element": {
 			"name": "home-page"
 		}
-	},
-	"txt": {
-		"files": ["*"],
-		"path": "/widget/texts",
-		"multilanguage": true
 	}
 }
