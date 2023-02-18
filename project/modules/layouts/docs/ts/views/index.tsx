@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Sidebar } from '../sidebar/index';
-import { Toasts } from '@essential-js/ui/toast';
 import { Header } from '../header';
 
 declare global {
@@ -16,13 +15,6 @@ export function Layout() {
 
 	return (
 		<div className="docs__layout">
-			<Toasts
-				position={{
-					bottom: '2rem',
-					right: '2rem',
-				}}
-			/>
-
 			<div className="sub__layout">
 				<div className="infra__layout">
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />

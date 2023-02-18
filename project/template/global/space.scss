@@ -1,0 +1,59 @@
+.padding- {
+	&1 {
+		padding: 1rem;
+	}
+
+	&x {
+		&1 {
+			padding: 0 1rem;
+		}
+	}
+
+	&y {
+		&1 {
+			padding: 1rem 0;
+		}
+	}
+
+	&b {
+		&1 {
+			padding: 1rem 0;
+		}
+	}
+
+	&t {
+		&1 {
+			padding: 1rem 0;
+		}
+	}
+}
+
+.margin- {
+	&1 {
+		margin: 1rem;
+	}
+
+	&x {
+		&1 {
+			margin: 0 1rem;
+		}
+	}
+
+	&y {
+		&1 {
+			margin: 1rem 0;
+		}
+	}
+
+	&b {
+		&1 {
+			margin: 1rem 0;
+		}
+	}
+
+	&t {
+		&1 {
+			margin: 1rem 0;
+		}
+	}
+}

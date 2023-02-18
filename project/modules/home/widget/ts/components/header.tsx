@@ -15,7 +15,8 @@ export function Header() {
 		<motion.span
 			transition={{ duration: 0.2, delay: index * 0.1 }}
 			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}>
+			animate={{ opacity: 1 }}
+			key={`${index}-${letter}`}>
 			{letter}
 		</motion.span>
 	));

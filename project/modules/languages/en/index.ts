@@ -24,6 +24,8 @@ import {
 	SuccessModalImplementation,
 	ModalImplementation,
 } from './implementations';
+import { toast } from '@essential-js/ui/toast';
+import { Card } from '@essential-js/ui/layout';
 
 // Imports //
 
@@ -38,7 +40,6 @@ import { default as _Textarea } from './mdx/form/textarea.mdx';
 import { default as _ValidateInput } from './mdx/form/validate-input.mdx';
 
 // Menu
-import { default as _Card } from './mdx/menu/card.mdx';
 import { default as _ElementTitle } from './mdx/menu/element-title.mdx';
 import { default as _Sidebar } from './mdx/menu/sidebar.mdx';
 import { default as _Table } from './mdx/menu/table.mdx';
@@ -49,6 +50,9 @@ import { default as _Modals } from './mdx/modals/index.mdx';
 
 // Toast
 import { default as _Toast } from './mdx/toast/index.mdx';
+
+// Layout
+import { default as _Card } from './mdx/layout/card.mdx';
 
 // Exports //
 

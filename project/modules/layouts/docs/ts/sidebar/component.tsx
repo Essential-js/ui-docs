@@ -22,8 +22,8 @@ export function Component({ name, path, active, setActive, index }: IComponent) 
 
 	return (
 		<motion.li
-			initial={{ x: -20, opacity: [0, 0.2, 0.3] }}
-			animate={{ x: [0, 10, 0], opacity: [0.3, 0.6, 0.9, 1] }}
+			initial={{ x: -20, opacity: 0 }}
+			animate={{ x: 0, opacity: 1 }}
 			transition={{ type: 'easeInOut', delay: index * 0.1, duration: 0.4 }}
 			className={`component__item ${activeCls}`}>
 			<div className="list-disc"></div>

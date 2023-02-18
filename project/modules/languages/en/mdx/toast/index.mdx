@@ -1,0 +1,176 @@
+import { Header } from '@essential-js/ui-docs/header';
+import { CopyableCode } from '@essential-js/ui/code';
+import { Button } from '@essential-js/ui/buttons';
+import { toast } from '@essential-js/ui/toast';
+
+<Header pretitle="Utils" title="Toasts" />
+
+<CopyableCode>{"import {Toasts, toast} from '@essential-js/ui/toast';"}</CopyableCode>
+
+<section>
+	<h3>Setup</h3>
+
+    <p>To start using the toast component you simply have to import the `Toasts` component and define the absolute position where you want the toast list to be displayed.</p>
+    <p>Also, to fire toast you only have to use the toast object and using the type that you want to fire execute it, each type of toast is a method that receives as first parameter the message that the toast must have and as second parameter the duration of this one in screen in milliseconds.</p>
+
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {Toasts, toast} from '@essential-js/ui/toast';
+
+function App() {
+
+    function displayToast() {
+                  /// Messsage     // Duration
+        toast.info('Awesome toast!', 2000)
+    }
+
+return (
+
+        <Toasts
+            position={{
+            bottom: '2rem',
+            right: '2rem',
+            }}
+        />
+    )
+
+}
+`}
+
+</CopyableCode>
+
+<section>
+    <h3>Types</h3>
+
+        <div className="d-flex">
+        <Button className="success" onClick={() => toast.success('Awesome message')}>
+            Success
+        </Button>
+        </div>
+        <CopyableCode>
+        {`
+
+import { toast } from '@essential-js/ui/toast';
+
+function App() {
+
+    function openModal() {
+    toast.success('Awesome message')
+    }
+
+    return (
+
+        <Button onClick={openModal}>Success</Button>
+    )
+
+}
+`}
+
+</CopyableCode>
+
+        <div className="d-flex">
+        <Button className="info" onClick={() => toast.info('Awesome message')}>
+            Info
+        </Button>
+        </div>
+        <CopyableCode>
+        {`
+
+import { toast } from '@essential-js/ui/toast';
+
+function App() {
+
+    function openModal() {
+    toast.info('Awesome message')
+    }
+
+    return (
+
+        <Button onClick={openModal}>Info</Button>
+    )
+
+}
+`}
+
+</CopyableCode>
+
+        <div className="d-flex">
+        <Button className="error" onClick={() => toast.error('Awesome message')}>
+            Error
+        </Button>
+        </div>
+        <CopyableCode>
+        {`
+
+import { toast } from '@essential-js/ui/toast';
+
+function App() {
+
+    function openModal() {
+    toast.error('Awesome message')
+    }
+
+    return (
+
+        <Button onClick={openModal}>Error</Button>
+    )
+
+}
+`}
+
+</CopyableCode>
+        <div className="d-flex">
+        <Button className="warning" onClick={() => toast.warning('Awesome message')}>
+            Warning
+        </Button>
+        </div>
+        <CopyableCode>
+        {`
+
+import { toast } from '@essential-js/ui/toast';
+
+function App() {
+
+    function openModal() {
+    toast.warning('Awesome message')
+    }
+
+    return (
+
+        <Button onClick={openModal}>Warning</Button>
+    )
+
+}
+`}
+
+</CopyableCode>
+        <div className="d-flex">
+        <Button className="info" onClick={() => toast.loading('Awesome message')}>
+            Loading
+        </Button>
+        </div>
+        <CopyableCode>
+        {`
+
+import { toast } from '@essential-js/ui/toast';
+
+function App() {
+
+    function openModal() {
+    toast.loading('Awesome message')
+    }
+
+    return (
+
+        <Button onClick={openModal}>Loading</Button>
+    )
+
+}
+`}
+
+</CopyableCode>
+
+</section>

@@ -50,6 +50,20 @@
 					{
 						"name": "Element Title",
 						"path": "element-title"
+					},
+					{
+						"name": "Toast",
+						"path": "toast"
+					}
+				]
+			},
+			{
+				"name": "Layout",
+				"icon": "layout",
+				"subComponents": [
+					{
+						"name": "Card",
+						"path": "card"
 					}
 				]
 			}

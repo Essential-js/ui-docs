@@ -14,7 +14,7 @@ export function Logo() {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ delay: index * 0.1 }}
-			key={letter}>
+			key={`${index}-${letter}`}>
 			{letter}
 		</motion.span>
 	));

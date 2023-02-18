@@ -1,4 +1,4 @@
-$tablet-breakpoint: 1440px;
+$tablet-breakpoint: 768px;
 
 .home__header {
 	min-height: 100vh;
@@ -10,7 +10,7 @@ $tablet-breakpoint: 1440px;
 
 	&-main-content {
 		display: grid;
-		align-items: center;
+		place-content: center;
 		gap: 1rem;
 
 		h1 {
@@ -24,7 +24,8 @@ $tablet-breakpoint: 1440px;
 			color: var(--disabled-text);
 			font-size: 1.5rem;
 			text-align: center;
-			padding: 0 22rem;
+			width: 630px;
+			margin: 0 auto;
 		}
 	}
 
@@ -51,6 +52,25 @@ $tablet-breakpoint: 1440px;
 			.content {
 				padding: 0 1.5rem;
 			}
+		}
+	}
+}
+
+@media (max-width: $tablet-breakpoint) {
+	.home__header {
+		&-main-content {
+			h1 {
+				font-size: 2rem;
+			}
+
+			p {
+				font-size: 1.2rem;
+				width: 100%;
+			}
+		}
+
+		.started {
+			gap: 2rem;
 		}
 	}
 }

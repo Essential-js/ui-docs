@@ -1,0 +1,43 @@
+import { Header } from '@essential-js/ui-docs/header';
+import { CopyableCode } from '@essential-js/ui/code';
+import { Button } from '@essential-js/ui/buttons';
+import { Card } from '@essential-js/ui/layout';
+import { Music } from 'iconsax-react';
+
+<Header pretitle="Layout" title="Card" />
+
+<CopyableCode>{"import {Card} from '@essential-js/ui/layout';"}</CopyableCode>
+
+<section>
+<CopyableCode>
+	{`
+import {Card} from '@essential-js/ui/layout';
+
+function App() {
+
+    return (
+        <Card>
+            Testing testing
+        </Card>
+    )
+
+}
+`}
+
+</CopyableCode>
+</section>
+
+<section>
+	<Card>Testing testing</Card>
+</section>
+
+<section>
+	<h3>Complete control of each part</h3>
+
+    <Card>
+        <h3 className="d-flex align-center gap-1"><Music size="18px"/>Access</h3>
+        <hr className="margin-y1" />
+        You can have complete control over every part of the component, we provide you with the basic design and the components you want to use, the shape you want to give it is completely up to you.
+    </Card>
+
+</section>
