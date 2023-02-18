@@ -16,6 +16,10 @@ const icons = {
 	layout: Element2,
 };
 
+const themeKey = 'theme';
+const DARK_THEME = 'dark';
+const LIGHT_THEME = 'light';
+
 export function Section({ name, icon, subComponents }: ISection) {
 	const [active, setActive] = React.useState<string | null>(null);
 	const [isOpen, setIsOpen] = React.useState(true);
@@ -36,7 +40,9 @@ export function Section({ name, icon, subComponents }: ISection) {
 	));
 
 	const SectionIcon = icons[icon];
-	const iconColor = !isOpen ? '#6d767b' : '#f2ecff';
+	const theme = localStorage.getItem(themeKey);
+	const iconColor =
+		theme === DARK_THEME ? (!isOpen ? '#6d767b' : '#f2ecff') : !isOpen ? '#f2ecff' : '#6d767b';
 
 	return (
 		<motion.div

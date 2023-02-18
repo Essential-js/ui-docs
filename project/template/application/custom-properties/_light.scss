@@ -1,11 +1,12 @@
 @mixin properties() {
 	// COLORS
-	--background: #000;
-	--secondary-background: #16181a;
+
+	--background: #ffffff;
+	--secondary-background: #f6f7f9;
 	--accent: #169ab7;
 	--accent-hover: #08bce3;
 	--accent-active: #106679;
-	--text-color: #f2ecff;
+	--text-color: #23272f;
 	--disabled: #555555;
 
 	--success: #4caf50;
@@ -29,5 +30,5 @@
 	--border-width: 3px;
 	--card-border-radius: 14px;
 	--disabled-text: #6d767b;
-	--disabled-input: #26292b;
+	--disabled-input: #dddbdb;
 }
