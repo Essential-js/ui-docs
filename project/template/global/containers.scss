@@ -9,8 +9,19 @@
 		justify-content: center;
 	}
 
-	&.gap-1 {
-		gap: 1rem;
+	&.gap- {
+		&1 {
+			gap: 1rem;
+		}
+		&2 {
+			gap: 2rem;
+		}
+		&3 {
+			gap: 3rem;
+		}
+		&4 {
+			gap: 4rem;
+		}
 	}
 
 	&.wrap {

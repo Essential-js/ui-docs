@@ -23,6 +23,9 @@
 	// Components
 	--header-border: #555;
 	--sidebar-mobile-background: #00000085;
+	--tooltip-background: var(--secondary-background);
+	--tooltip-border: var(--disabled-text);
+	--tooltip-border-radius: 5px;
 
 	// UTILS
 	--buttons-border-radius: 12px;

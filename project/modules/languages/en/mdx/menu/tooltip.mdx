@@ -1,0 +1,68 @@
+import { Header } from '@essential-js/ui-docs/header';
+import { CopyableCode } from '@essential-js/ui/code';
+import { Button } from '@essential-js/ui/buttons';
+import { Tooltip } from '@essential-js/ui/menu';
+
+<Header pretitle="Menu" title="Tooltip" />
+
+<CopyableCode>{`import {Tooltip} from '@essential-js/ui/menu';`}</CopyableCode>
+
+<section>
+	<h3>Orientation</h3>
+	
+    <div className="d-flex flex-column gap-2">
+        <Tooltip title="This is the top tooltip" position="top">Hover me to se the top tooltip!</Tooltip>
+        <Tooltip title="This is the left tooltip" position="left">Hover me to se the left tooltip!</Tooltip>
+        <Tooltip title="This is the bottom tooltip" position="bottom">Hover me to se the bottom tooltip!</Tooltip>
+        <Tooltip title="This is the right tooltip" position="right">Hover me to se the right tooltip!</Tooltip>
+    </div>
+
+</section>
+
+<CopyableCode>
+{`
+import React from 'react';
+import {Tooltip} from '@essential-js/ui/menu';
+
+function App() {
+
+    return (
+        <>
+            <Tooltip title="This is the top tooltip" position="top">Hover me to se the top tooltip!</Tooltip>
+            <Tooltip title="This is the left tooltip" position="left">Hover me to se the left tooltip!</Tooltip>
+            <Tooltip title="This is the bottom tooltip" position="bottom">Hover me to se the bottom tooltip!</Tooltip>
+            <Tooltip title="This is the right tooltip" position="right">Hover me to se the right tooltip!</Tooltip>
+        </>
+    )
+
+}
+`}
+
+</CopyableCode>
+
+<section>
+	<h3>Applicable for any element</h3>
+
+    <Tooltip position="right" title="Look at me, im alive!!">
+        <Button className="error bordered">Fully customizable!</Button>
+    </Tooltip>
+
+</section>
+
+<CopyableCode>
+	{`
+import React from 'react';
+import {Button} from '@essential-js/ui/buttons';
+
+function App() {
+
+    return (
+        <Tooltip position="right" title="Look at me, im alive!!">
+            <Button className="error bordered">Fully customizable!</Button>
+        </Tooltip>
+    )
+
+}
+`}
+
+</CopyableCode>

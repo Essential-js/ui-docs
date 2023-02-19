@@ -19,6 +19,11 @@
 	"modules": {
 		"path": "modules"
 	},
+	"libraries": {
+		"imports": [
+			"@essential-js/ui"
+		]
+	},
 	"params": {
 		"menu": [
 			{
@@ -54,6 +59,10 @@
 					{
 						"name": "Toast",
 						"path": "toast"
+					},
+					{
+						"name": "Tooltip",
+						"path": "tooltip"
 					}
 				]
 			},
@@ -91,7 +100,6 @@
 	},
 	"dependencies": {
 		"@beyond-js/react-widgets": "^18.20.4",
-		"@essential-js/ui": "^0.0.6",
 		"framer-motion": "^9.0.2",
 		"iconsax-react": "^0.0.8",
 		"nanoid": "^4.0.0",

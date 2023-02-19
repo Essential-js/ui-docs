@@ -44,6 +44,7 @@ import { default as _ElementTitle } from './mdx/menu/element-title.mdx';
 import { default as _Sidebar } from './mdx/menu/sidebar.mdx';
 import { default as _Table } from './mdx/menu/table.mdx';
 import { default as _Tabs } from './mdx/menu/tabs.mdx';
+import { default as _Tooltip } from './mdx/menu/tooltip.mdx';
 
 // Modals
 import { default as _Modals } from './mdx/modals/index.mdx';
@@ -71,6 +72,7 @@ export /*bundle*/ const ElementTitle = _ElementTitle;
 export /*bundle*/ const Sideabar = _Sidebar;
 export /*bundle*/ const Table = _Table;
 export /*bundle*/ const Tabs = _Tabs;
+export /*bundle*/ const Tooltip = _Tooltip;
 
 // Modals
 export /*bundle*/ const Modals = _Modals;

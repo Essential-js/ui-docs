@@ -30,10 +30,7 @@
 	// Components
 	--header-border: #5555558a;
 	--sidebar-mobile-background: #00000085;
-
-	// Blobs
-	--first-blob-color: #7309a8;
-	--second-blob-color: #c705ba;
-	--third-blob-color: #6a00f4;
-	--four-blob-color: #d604be;
+	--tooltip-background: var(--secondary-background);
+	--tooltip-border: var(--disabled-text);
+	--tooltip-border-radius: 5px;
 }
