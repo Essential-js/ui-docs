@@ -4,11 +4,11 @@ import { CopyableCode } from '@essential-js/ui/code';
 import { routing } from '@beyond-js/kernel/routing';
 import { motion } from 'framer-motion';
 
-const TITLE = 'Reusable, Useful, Futuristic';
+const TITLE = 'Reusable, Useful, Essential';
 
 export function Header() {
 	function goDocs() {
-		routing.pushState('/docs/buttons');
+		routing.pushState('/docs/getting-started');
 	}
 
 	const titleItems = TITLE.split('').map((letter: string, index: number) => (
@@ -30,10 +30,13 @@ export function Header() {
 					transition={{ duration: 0.5 }}>
 					{titleItems}
 				</motion.h1>
-				<p>
+				<motion.p
+					initial={{ opacity: 0, y: 50, scale: 0.9 }}
+					animate={{ opacity: 1, y: 0, scale: 1 }}
+					transition={{ duration: 0.5, delay: 0.2 }}>
 					Save yourself and your team time by using Essential-UI's pre-designed, fully
 					customizable and editable components.
-				</p>
+				</motion.p>
 			</div>
 
 			<div className="started">

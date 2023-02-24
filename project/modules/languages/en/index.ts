@@ -25,9 +25,13 @@ import {
 	ModalImplementation,
 } from './implementations';
 import { toast } from '@essential-js/ui/toast';
+import { Avatar } from '@essential-js/ui/avatar';
 import { Card } from '@essential-js/ui/layout';
 
 // Imports //
+
+// Getting started
+import { default as _GettingStarted } from './mdx/getting-started/index.mdx';
 
 // Form
 import { default as _404 } from './mdx/404.mdx';
@@ -45,6 +49,7 @@ import { default as _Sidebar } from './mdx/menu/sidebar.mdx';
 import { default as _Table } from './mdx/menu/table.mdx';
 import { default as _Tabs } from './mdx/menu/tabs.mdx';
 import { default as _Tooltip } from './mdx/menu/tooltip.mdx';
+import { default as _Avatar } from './mdx/menu/avatar.mdx';
 
 // Modals
 import { default as _Modals } from './mdx/modals/index.mdx';
@@ -56,6 +61,9 @@ import { default as _Toast } from './mdx/toast/index.mdx';
 import { default as _Card } from './mdx/layout/card.mdx';
 
 // Exports //
+
+// Getting Started
+export /*bundle*/ const GettingStarted = _GettingStarted;
 
 // Form
 export /*bundle*/ const NotFound = _404;
@@ -73,6 +81,7 @@ export /*bundle*/ const Sideabar = _Sidebar;
 export /*bundle*/ const Table = _Table;
 export /*bundle*/ const Tabs = _Tabs;
 export /*bundle*/ const Tooltip = _Tooltip;
+export /*bundle*/ const Avatar = _Avatar;
 
 // Modals
 export /*bundle*/ const Modals = _Modals;

@@ -2,6 +2,7 @@ import React from 'react';
 import config from '@essential-js/ui-docs/config';
 import { Section, ISection } from './section';
 import { Logo } from './logo';
+import { Component } from './component';
 
 interface Props {
 	isOpen: boolean;
@@ -9,8 +10,8 @@ interface Props {
 }
 
 export function Sidebar({ isOpen, setIsOpen }: Props) {
-	const sections = config.params.menu.map((section: ISection) => (
-		<Section key={section.name} {...section} />
+	const sections = config.params.menu.map((section: ISection, index: number) => (
+		<Section key={section.name} index={index} {...section} />
 	));
 
 	function close() {

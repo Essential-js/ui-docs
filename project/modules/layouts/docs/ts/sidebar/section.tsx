@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component, IComponent } from './component';
-import { ArrowDown2, Box2, ColorSwatch, Element2 } from 'iconsax-react';
+import { ArrowDown2, Box2, ColorSwatch, Electricity, Element2 } from 'iconsax-react';
 import { motion } from 'framer-motion';
 
 export interface ISection {
@@ -8,19 +8,20 @@ export interface ISection {
 	name: string;
 	icon: string;
 	key: string;
+	index: number;
 }
 
 const icons = {
 	form: ColorSwatch,
 	utils: Box2,
 	layout: Element2,
+	tutorial: Electricity,
 };
 
 const themeKey = 'theme';
 const DARK_THEME = 'dark';
-const LIGHT_THEME = 'light';
 
-export function Section({ name, icon, subComponents }: ISection) {
+export function Section({ name, icon, subComponents, index }: ISection) {
 	const [active, setActive] = React.useState<string | null>(null);
 	const [isOpen, setIsOpen] = React.useState(true);
 	const cls = isOpen ? 'open' : 'closed';
@@ -48,7 +49,7 @@ export function Section({ name, icon, subComponents }: ISection) {
 		<motion.div
 			initial={{ opacity: 0, x: -50 }}
 			animate={{ opacity: 1, x: 0 }}
-			transition={{ duration: 0.2 }}
+			transition={{ duration: 0.1, delay: index * 0.1 }}
 			className="section__container">
 			<li className={`section__item ${cls}`} onClick={toggleOpen}>
 				<SectionIcon className="section__icon" variant="Bold" color={iconColor} />

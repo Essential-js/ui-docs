@@ -1,5 +1,4 @@
 import React from 'react';
-import { routing } from '@beyond-js/kernel/routing';
 
 export function Footer() {
 	return (
