@@ -10,17 +10,10 @@
 	}
 
 	&.gap- {
-		&1 {
-			gap: 1rem;
-		}
-		&2 {
-			gap: 2rem;
-		}
-		&3 {
-			gap: 3rem;
-		}
-		&4 {
-			gap: 4rem;
+		@for $i from 1 through 50 {
+			&#{$i} {
+				gap: #{$i}rem;
+			}
 		}
 	}
 

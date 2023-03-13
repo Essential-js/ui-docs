@@ -1,10 +1,66 @@
 import { Header } from '@essential-js/ui-docs/header';
 import { CopyableCode } from '@essential-js/ui/code';
-import { Button } from '@essential-js/ui/buttons';
 import { Avatar } from '@essential-js/ui/avatar';
 
 <Header pretitle="Utils" title="Avatar" />
 
-<CopyableCode>{`import {ElementTitle} from '@essential-js/ui/menu';`}</CopyableCode>
+<CopyableCode>{`import { Avatar } from '@essential-js/ui/avatar';`}</CopyableCode>
 
-<Avatar className="border-20" placeholder="BC" placeholderColor="#F67E7D" />
+<section>
+    <h3>Two states available</h3>
+
+    <div className="d-flex gap-1">
+     <div className="d-flex flex-column gap-1 align-center">
+        Unloaded
+
+        <Avatar className="border-20 docs-avatar" placeholder="BC" placeholderColor="#F67E7D" />
+    </div>
+    <div className="d-flex flex-column gap-1 align-center">
+        Loaded
+
+        <Avatar
+            className="border-20 docs-avatar"
+            src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w=740&t=st=1678461191~exp=1678461791~hmac=11a7ebf6130b1b9afd263034044e31db758e708fc904a9acf691758178fdc99e"
+            placeholder="BC"
+            placeholderColor="#F67E7D"
+        />
+        </div>
+    </div>
+
+</section>
+
+If the set image takes a long time to load we take care of the layout shifting by displaying the "unloaded" status until the image loads!
+
+<section>
+    <h3>Implementation</h3>
+
+    <CopyableCode>
+    {`
+
+import { Avatar } from '@essential-js/ui/avatar';
+
+function App() {
+
+return (
+
+<>
+    Unloaded
+    <Avatar className="border-20 docs-avatar" placeholder="BC" placeholderColor="#F67E7D" />
+
+        Loaded
+        <Avatar
+            className="border-20 docs-avatar"
+            src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w=740&t=st=1678461191~exp=1678461791~hmac=11a7ebf6130b1b9afd263034044e31db758e708fc904a9acf691758178fdc99e"
+            placeholder="BC"
+            placeholderColor="#F67E7D"
+        />
+
+</>
+    )
+
+}
+`}
+
+</CopyableCode>
+
+</section>
